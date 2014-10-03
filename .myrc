@@ -1,0 +1,10 @@
+# source z.sh
+. ~/.tools/z.sh
+
+# Quick find shortcut
+fnd(){
+	find ./ -iname "*$1*"
+}
+
+# fix tmux vim colours
+export TERM=xterm-256color
