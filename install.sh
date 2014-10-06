@@ -9,17 +9,11 @@ fi
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
-git submodule update --init;
-
 function doIt() {
     echo "Syncing dotfiles to home directory..."
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" \
         --exclude "README.md" --exclude "LICENSE" --exclude ".gitignore" \
         -av --no-perms . ~;
-    echo "Setting zsh to the default shell..."
-    chsh -s `which zsh` $USER;
-    echo "You will need to logout and login for change of default shell to take effect"
     echo "done"
 }
 

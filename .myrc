@@ -1,5 +1,5 @@
 # source z.sh
-. ~/.tools/z.sh
+. ~/.oh-my-zsh/plugins/z/z.sh
 
 # Quick find shortcut
 fnd(){
