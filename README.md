@@ -24,6 +24,7 @@ sudo apt-get install zsh
 ```
 chsh -s `which zsh` $USER;
 ```
+Note: you will need to logout and log back in for this to take effect
 
 ## Installation
 
