@@ -4,7 +4,10 @@
 :set autoindent          " copy indent from current line when starting a new line
 :set nu
 :set ai sw=4
-:set hlsearch
+:set hlsearch            " highlight search result
+:set incsearch           " highlight as your search
+:set ignorecase          " ignore search case
+:set smartcase           " unless you use capitals
 :set scrolloff=5
 :set fileformat=unix
 :set tabpagemax=50
@@ -97,3 +100,5 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+" Some hack to make powerline appear
+set laststatus=2
