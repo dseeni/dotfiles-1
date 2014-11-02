@@ -5,7 +5,6 @@
 :set nu
 :set ai sw=4
 :set hlsearch            " highlight search result
-:set incsearch           " highlight as your search
 :set ignorecase          " ignore search case
 :set smartcase           " unless you use capitals
 :set scrolloff=5
