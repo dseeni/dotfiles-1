@@ -13,6 +13,8 @@
  - [vim-distinguished](https://github.com/Lokaltog/vim-distinguished)
  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+ - [vim-powerline](https://github.com/Lokaltog/vim-powerline)
+ - [vim-css-color](https://github.com/skammer/vim-css-color)
 
 ## Requirements
 
@@ -20,7 +22,7 @@
 ```
 sudo apt-get install zsh
 ```
-- Ensure zsh is set as yoru default shell:
+- Ensure zsh is set as your default shell:
 ```
 chsh -s `which zsh` $USER;
 ```
