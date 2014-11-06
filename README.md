@@ -26,6 +26,11 @@ chsh -s `which zsh` $USER;
 ```
 Note: you will need to logout and log back in for this to take effect
 
+- Ensure you have flake8 and pep257 installed (for vim-syntastic)
+```
+sudo pip install flake8 pep257
+```
+
 ## Installation
 
 ```
