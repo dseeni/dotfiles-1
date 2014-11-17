@@ -36,8 +36,7 @@ sudo pip install flake8 pep257
 ## Installation
 
 ```
-git clone https://github.com/tom-james-watson/dotfiles
+git clone --recursive https://github.com/tom-james-watson/dotfiles
 cd dotfiles
-git submodule update --init
 ./install.sh
 ```
