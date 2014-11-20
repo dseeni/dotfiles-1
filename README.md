@@ -1,5 +1,9 @@
 # dotfiles
 
+These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (python/Javascript) developer.
+
+I've only ever used these on Ubuntu, but they should work on other Ubuntu-based distros.
+
 ## Contains
 
 - custom config for vim, ack-grep, zsh and tmux
@@ -37,6 +41,8 @@ sudo pip install flake8 pep257
 
 ```
 git clone --recursive https://github.com/tom-james-watson/dotfiles
+
 cd dotfiles
+
 ./install.sh
 ```
