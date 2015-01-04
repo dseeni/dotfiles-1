@@ -10,7 +10,6 @@ I've only ever used these on Ubuntu, but they should work on other Ubuntu-based 
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - vim plugins:
  - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
- - [goyo.vim](https://github.com/junegunn/goyo.vim)
  - [nerdtree](https://github.com/scrooloose/nerdtree)
  - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
  - [syntastic](https://github.com/scrooloose/syntastic)
@@ -18,6 +17,8 @@ I've only ever used these on Ubuntu, but they should work on other Ubuntu-based 
  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
  - [vim-powerline](https://github.com/Lokaltog/vim-powerline)
+ - [goyo.vim](https://github.com/junegunn/goyo.vim)
+ - [limelight.vim](https://github.com/junegunn/limelight.vim)
  - [vim-css-color](https://github.com/skammer/vim-css-color)
 
 ## Requirements
