@@ -115,6 +115,12 @@ function! s:goyo_enter()
     silent !tmux set status off
   endif
   :setlocal spell spelllang=en_gb " enable spellchecker
+  :set linebreak " break lines
+  " allow navigation within softlines
+  imap <silent> <Down> <C-o>gj
+  imap <silent> <Up> <C-o>gk
+  nmap <silent> <Down> gj
+  nmap <silent> <Up> gk
 endfunction
 
 function! s:goyo_leave()
@@ -131,6 +137,9 @@ function! s:goyo_leave()
     silent !tmux set status on
   endif
   :set nospell " disable spellchecker
+  :set linebreak!
+  :unmap <Down>
+  :unmap <Up>
 endfunction
 
 autocmd User GoyoEnter call <SID>goyo_enter()
