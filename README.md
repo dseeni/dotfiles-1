@@ -4,7 +4,7 @@ These dotfiles contain all of the necessary packages, plugins and config I need 
 
 I've only ever used these on Ubuntu, but they should work on other Ubuntu-based distros.
 
-## Contains
+## Contents
 
 - custom config for vim, ack-grep, zsh and tmux
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
