@@ -40,7 +40,7 @@ sudo pip install flake8 pep257
 
 ## Installation
 
-**NOTE - you must include the --recursive option on your git clone**
+**NOTE - you must include the `--recursive` option on your git clone**
 
 ```
 git clone --recursive https://github.com/tom-james-watson/dotfiles
