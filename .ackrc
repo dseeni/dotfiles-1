@@ -1,7 +1,11 @@
+# Show two lines of context around matches
 --context=2
 
+# Allow searching of Coffeescript files with --coffee
 --type-set
 coffee=.coffee
 
+# Allow searching of SASS files with --sass or --scss
 --type-set
 sass=.scss,.sass
+scss=.scss,.sass
