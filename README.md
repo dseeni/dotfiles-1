@@ -47,3 +47,14 @@ cd dotfiles
 
 ./install.sh
 ```
+
+## Updating
+
+In your dotfiles directory:
+```
+git pull
+
+git submodule update --init
+
+./install.sh
+```
