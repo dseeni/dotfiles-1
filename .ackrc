@@ -8,4 +8,5 @@ coffee=.coffee
 # Allow searching of SASS files with --sass or --scss
 --type-set
 sass=.scss,.sass
+--type-set
 scss=.scss,.sass
