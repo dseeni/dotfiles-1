@@ -121,6 +121,7 @@ function! s:goyo_enter()
   imap <silent> <Up> <C-o>gk
   nmap <silent> <Down> gj
   nmap <silent> <Up> gk
+  :call AutoCorrect() " load autocorrections
 endfunction
 
 function! s:goyo_leave()
