@@ -19,6 +19,7 @@ I've only ever used these on Ubuntu, but they should work on other Ubuntu-based 
  - [vim-powerline](https://github.com/Lokaltog/vim-powerline)
  - [goyo.vim](https://github.com/junegunn/goyo.vim)
  - [limelight.vim](https://github.com/junegunn/limelight.vim)
+ - [vim-autocorrect](https://github.com/panozzaj/vim-autocorrect)
  - [vim-css-color](https://github.com/skammer/vim-css-color)
 
 ## Requirements
