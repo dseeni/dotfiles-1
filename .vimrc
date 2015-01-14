@@ -101,8 +101,16 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" Some hack to make powerline appear
+" Hack to show status bar
 set laststatus=2
+" Enable vim-airline plugins
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+
+" Toggle Tagbar
+nmap <F8> :TagbarToggle<CR>
 
 " Goyo optimisations
 function! s:goyo_enter()
