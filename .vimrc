@@ -21,6 +21,9 @@
 :nnoremap g* g*zz
 :nnoremap g# g#zz
 
+" Clear search highlighting with enter
+nnoremap <cr> :noh<CR><CR>:<backspace>
+
 " F9 to toggle paste mode
 :nnoremap <silent><F9> :set paste!<CR>
 
@@ -85,7 +88,7 @@ map <Esc>[1;5C <C-Right>
 " insert mode
 map! <Esc>[1;5D <C-Left>
 map! <Esc>[1;5C <C-Right>
-
+" Switch tabs with Ctrl left and right
 nnoremap <C-right> :tabnext<CR>
 nnoremap <C-left> :tabprevious<CR>
 " insert mode
