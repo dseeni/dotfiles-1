@@ -52,6 +52,18 @@ cd dotfiles
 ./install.sh
 ```
 
+### Advanced
+
+If you want to use tag-dependent functionality, you'll want to
+- Ensure you have exuberant-ctags installed
+```
+sudo apt-get install exuberant-ctags
+```
+- Periodically build ctags on your desired codebase by adding this to the bottom of your crontab (`crontab -e`)
+```
+1 * * * * ctags -R -o ~/mytags <path/to/src/directory>
+```
+
 ## Updating
 
 In your dotfiles directory:
