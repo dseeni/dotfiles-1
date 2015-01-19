@@ -52,7 +52,7 @@ cd dotfiles
 ./install.sh
 ```
 
-### Advanced
+#### Advanced
 
 If you want to use tag-dependent functionality, you'll want to
 - Ensure you have exuberant-ctags installed
