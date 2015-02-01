@@ -66,11 +66,7 @@ sudo apt-get install exuberant-ctags
 
 ## Updating
 
-In your dotfiles directory:
 ```
-git pull
-
-git submodule update --init
-
+./update.sh
 ./install.sh
 ```
