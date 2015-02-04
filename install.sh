@@ -13,7 +13,7 @@ function doIt() {
     echo "Syncing dotfiles to home directory..."
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" \
         --exclude "README.md" --exclude "LICENSE" --exclude ".gitignore" \
-        -av --no-perms . ~;
+        --exclude "update.sh" -av --no-perms . ~;
     echo "done"
 }
 
