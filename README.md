@@ -61,7 +61,7 @@ sudo apt-get install exuberant-ctags
 ```
 - Periodically build ctags on your desired codebase by adding this to the bottom of your crontab (`crontab -e`)
 ```
-1 * * * * ctags -R -o ~/mytags <path/to/src/directory>
+1 * * * * ctags -R -o ~/.ctags <path/to/src/directory>
 ```
 
 ## Updating
