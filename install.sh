@@ -10,6 +10,11 @@ fi
 cd "$(dirname "${BASH_SOURCE}")";
 
 function doIt() {
+    git reset --hard
+    git fetch origin
+    git merge origin/master
+    git submodule update --init
+    git clean -f
     echo "Syncing dotfiles to home directory..."
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" \
         --exclude "README.md" --exclude "LICENSE" --exclude ".gitignore" \
