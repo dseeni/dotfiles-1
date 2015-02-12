@@ -42,8 +42,10 @@ sudo pip install flake8 pep257
 
 ## Installation
 
+**NOTE - you must include the `--recursive` option on your git clone**
+
 ```
-git clone https://github.com/tom-james-watson/dotfiles
+git clone --recursive https://github.com/tom-james-watson/dotfiles
 
 cd dotfiles
 
@@ -64,8 +66,7 @@ sudo apt-get install exuberant-ctags
 
 ## Updating
 
-The installation script will also pull the latest version and update your dotfiles if you rerun it.
-
 ```
+./update.sh
 ./install.sh
 ```
