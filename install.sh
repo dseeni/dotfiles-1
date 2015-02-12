@@ -10,6 +10,8 @@ fi
 cd "$(dirname "${BASH_SOURCE}")";
 
 function doIt() {
+    echo "Installing submodules..."
+    git submodule update --init
     echo "Syncing dotfiles to home directory..."
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "install.sh" \
         --exclude "README.md" --exclude "LICENSE" --exclude ".gitignore" \
