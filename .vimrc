@@ -44,7 +44,10 @@ map <C-n> :NERDTreeTabsToggle<CR>
 " let g:nerdtree_tabs_open_on_console_startup=1
 
 " CtrlP
-let g:ctrlp_working_path_mode = 'ra'
+" Only search for things under the directory that you opened vim from
+let g:ctrlp_working_path_mode = ''
+" Don't index inside node_modules
+let g:ctrlp_custom_ignore = 'node_modules'
 
 " Set 80 column text width
 set colorcolumn=80
