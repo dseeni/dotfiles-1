@@ -14,7 +14,7 @@ function doIt() {
     git clean -f
     echo "Syncing dotfiles to home directory..."
     rsync --exclude ".git/" --exclude ".gitmodules" --exclude ".DS_Store"
-          --exclude "install.sh" \ --exclude "README.md" --exclude "LICENSE"
+          --exclude "install.sh" \ --exclude "README.md" --exclude "UNLICENSE"
           --exclude ".gitignore" \ --exclude "update.sh" -av --no-perms . ~;
     echo "done"
 }
