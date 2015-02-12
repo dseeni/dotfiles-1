@@ -22,6 +22,8 @@ I've only ever used these on Ubuntu, but they should work on other Ubuntu-based 
  - [limelight.vim](https://github.com/junegunn/limelight.vim)
  - [vim-autocorrect](https://github.com/panozzaj/vim-autocorrect)
  - [vim-css-color](https://github.com/skammer/vim-css-color)
+ - [vim-misc](https://github.com/xolox/vim-misc)
+ - [vim-easytags](https://github.com/xolox/vim-easytags)
 
 ## Requirements
 
@@ -39,6 +41,10 @@ Note: you will need to logout and log back in for this to take effect
 ```
 sudo pip install flake8 pep257
 ```
+- Ensure you have exuberant-ctags installed (for vim tags and tagbar)
+```
+sudo apt-get install exuberant-ctags
+```
 
 ## Installation
 
@@ -48,18 +54,6 @@ git clone https://github.com/tom-james-watson/dotfiles
 cd dotfiles
 
 ./install.sh
-```
-
-#### Advanced
-
-If you want to use tag-dependent functionality, you'll want to
-- Ensure you have exuberant-ctags installed
-```
-sudo apt-get install exuberant-ctags
-```
-- Periodically build ctags on your desired codebase by adding this to the bottom of your crontab (`crontab -e`)
-```
-1 * * * * ctags -R -o ~/.ctags <path/to/src/directory>
 ```
 
 ## Updating

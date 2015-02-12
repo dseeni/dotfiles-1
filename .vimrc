@@ -71,9 +71,6 @@ let g:syntastic_python_pep257_args='--ignore=D100,D101,D102,D103,D401,D400,D205,
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 
-" Include ctags
-:set tags=~/.ctags
-
 " Function: Open tag under cursor in new tab C-\
 " Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -160,3 +157,6 @@ endfunction
 autocmd User GoyoEnter call <SID>goyo_enter()
 autocmd User GoyoLeave call <SID>goyo_leave()
 
+" Settings for vim-easytags
+:let g:easytags_async = 1
+" :let g:easytags_auto_highlight = 0
