@@ -2,7 +2,7 @@
 
 These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (python/Javascript) developer.
 
-I've only ever used these on Ubuntu, but they should work on other Ubuntu-based distros.
+I've tested these dotfiles on both ubuntu and OS X (you'll need to fiddle with the install commands for OS X).
 
 ## Contents
 
@@ -33,7 +33,7 @@ sudo apt-get install zsh
 ```
 - Ensure zsh is set as your default shell:
 ```
-chsh -s `which zsh` $USER;
+chsh -s $(which zsh)
 ```
 Note: you will need to logout and log back in for this to take effect
 

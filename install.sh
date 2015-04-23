@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-if [ $(dpkg-query -W -f='${Status}' zsh 2>/dev/null | grep -c "ok installed") -eq 0 ];
-then
-    echo "zsh is not installed! Please run:"
-    echo "sudo apt-get install zsh"
-    exit
-fi
-
 cd "$(dirname "${BASH_SOURCE}")";
 
 function doIt() {
