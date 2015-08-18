@@ -46,6 +46,8 @@ map <C-n> :NERDTreeTabsToggle<CR>
 " CtrlP
 " Only search for things under the directory that you opened vim from
 let g:ctrlp_working_path_mode = ''
+" Ignore temp files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " Don't index inside node_modules
 let g:ctrlp_custom_ignore = 'node_modules'
 
