@@ -123,7 +123,6 @@ function! s:goyo_enter()
   let b:quitting_bang = 0
   autocmd QuitPre <buffer> let b:quitting = 1
   cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
-  Limelight " run limelight plugin (highlight current paragraph)
   if exists('$TMUX') " hide tmux status bar
     silent !tmux set status off
   endif
@@ -146,7 +145,6 @@ function! s:goyo_leave()
       qa
     endif
   endif
-  Limelight!
   if exists('$TMUX') " reenable tmux status bar
     silent !tmux set status on
   endif
