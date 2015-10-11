@@ -12,6 +12,7 @@
 :set tabpagemax=50
 :set expandtab
 :set mouse=a
+:set wildmenu            " visual autocomplete for command menu
 
 " Make searches appear in centre of page
 :nnoremap n nzz
