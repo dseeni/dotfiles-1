@@ -54,7 +54,7 @@ let g:ctrlp_custom_ignore = 'node_modules'
 
 " Set 80 column text width
 set colorcolumn=80
-highlight ColorColumn ctermbg=5
+highlight ColorColumn ctermbg=8
 
 :set t_Co=256
 
@@ -64,7 +64,7 @@ if has('gui_running')
     set guifont=Inconsolata\ 10
 else
     " set colorscheme for terminal vim
-    colorscheme distinguished
+    colorscheme termschool
 endif
 
 " set syntastic python checker to flake8
