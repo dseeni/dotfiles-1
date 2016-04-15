@@ -52,10 +52,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " Don't index inside node_modules
 let g:ctrlp_custom_ignore = 'node_modules'
 
-" Set 80 column text width
-set colorcolumn=80
-highlight ColorColumn ctermbg=8
-
 :set t_Co=256
 
 if has('gui_running')
@@ -66,6 +62,10 @@ else
     " set colorscheme for terminal vim
     colorscheme termschool
 endif
+
+" Set 80 column text width
+set colorcolumn=80
+highlight ColorColumn ctermbg=8
 
 " set syntastic python checker to flake8
 let g:syntastic_python_checkers=['flake8', 'pep257', 'python']
