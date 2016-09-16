@@ -71,6 +71,9 @@ highlight ColorColumn ctermbg=8
 let g:syntastic_python_checkers=['flake8', 'pep257', 'python']
 let g:syntastic_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
 let g:syntastic_python_pep257_args='--ignore=D100,D101,D102,D103,D401,D400,D205,D203,D204'
+let g:syntastic_python_pep257_args='--ignore=D100,D101,D102,D103,D401,D400,D205,D203,D204'
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = '/usr/local/bin/eslint'
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 

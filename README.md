@@ -45,6 +45,10 @@ sudo pip install flake8 pep257
 ```
 sudo apt-get install exuberant-ctags
 ```
+- Ensure you have eslint requirements installed (for vim-syntastic)
+```
+sudo npm install -g eslint babel-eslint eslint-plugin-react
+```
 
 ## Installation
 
