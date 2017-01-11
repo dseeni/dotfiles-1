@@ -50,7 +50,7 @@ let g:ctrlp_working_path_mode = ''
 " Ignore temp files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " Don't index inside node_modules
-let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|htmlcov)$'
 
 :set t_Co=256
 
