@@ -74,8 +74,33 @@ let g:syntastic_python_pep257_args='--ignore=D100,D101,D102,D103,D401,D400,D205,
 let g:syntastic_python_pep257_args='--ignore=D100,D101,D102,D103,D401,D400,D205,D203,D204'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = '/usr/local/bin/eslint'
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
+
+" Fix syntastic error jumping - make it wrap
+function! <SID>LocationPrevious()
+    try
+        lprev
+    catch /^Vim\%((\a\+)\)\=:E553/
+        llast
+    endtry
+endfunction
+
+function! <SID>LocationNext()
+    try
+        lnext
+    catch /^Vim\%((\a\+)\)\=:E553/
+        lfirst
+    endtry
+endfunction
+
+" Map error jumping to [ or ] + e
+nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
+nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
+nmap <silent> [e  <Plug>LocationPrevious
+nmap <silent> ]e  <Plug>LocationNext
+
 
 " Function: Open tag under cursor in new tab C-\
 " Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
