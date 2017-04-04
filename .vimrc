@@ -14,6 +14,9 @@
 :set mouse=a
 :set wildmenu            " visual autocomplete for command menu
 
+" Make backspace work properly in insert mode
+set backspace=indent,eol,start
+
 " Make searches appear in centre of page
 :nnoremap n nzz
 :nnoremap N Nzz
@@ -66,41 +69,6 @@ endif
 " Set 80 column text width
 set colorcolumn=80
 highlight ColorColumn ctermbg=8
-
-" set syntastic python checker to flake8
-let g:syntastic_python_checkers=['flake8', 'pep257', 'python']
-let g:syntastic_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
-let g:syntastic_python_pep257_args='--ignore=D100,D101,D102,D103,D401,D400,D205,D203,D204'
-let g:syntastic_python_pep257_args='--ignore=D100,D101,D102,D103,D401,D400,D205,D203,D204'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = '/usr/local/bin/eslint'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
-
-" Fix syntastic error jumping - make it wrap
-function! <SID>LocationPrevious()
-    try
-        lprev
-    catch /^Vim\%((\a\+)\)\=:E553/
-        llast
-    endtry
-endfunction
-
-function! <SID>LocationNext()
-    try
-        lnext
-    catch /^Vim\%((\a\+)\)\=:E553/
-        lfirst
-    endtry
-endfunction
-
-" Map error jumping to [ or ] + e
-nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
-nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
-nmap <silent> [e  <Plug>LocationPrevious
-nmap <silent> ]e  <Plug>LocationNext
-
 
 " Function: Open tag under cursor in new tab C-\
 " Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
@@ -192,3 +160,30 @@ autocmd User GoyoLeave call <SID>goyo_leave()
 
 " Always write to existing file - prevents webpack watch flakiness
 :set backupcopy=yes
+
+" ALE configuration
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
+
+" Fix syntastic error jumping - make it wrap
+function! <SID>LocationPrevious()
+    try
+        lprev
+    catch /^Vim\%((\a\+)\)\=:E553/
+        llast
+    endtry
+endfunction
+
+function! <SID>LocationNext()
+    try
+        lnext
+    catch /^Vim\%((\a\+)\)\=:E553/
+        lfirst
+    endtry
+endfunction
+
+" Map error jumping to [ or ] + e
+nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
+nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
+nmap <silent> [e  <Plug>LocationPrevious
+nmap <silent> ]e  <Plug>LocationNext

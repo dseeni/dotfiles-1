@@ -4,6 +4,8 @@ These dotfiles contain all of the necessary packages, plugins and config I need 
 
 I've tested these dotfiles on both ubuntu and OS X (you'll need to fiddle with the install commands for OS X).
 
+**NOTE - you will need vim version 8.0 or higher.**
+
 ## Contents
 
 - custom config for vim, ack-grep, zsh and tmux
@@ -12,7 +14,7 @@ I've tested these dotfiles on both ubuntu and OS X (you'll need to fiddle with t
  - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
  - [nerdtree](https://github.com/scrooloose/nerdtree)
  - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
- - [syntastic](https://github.com/scrooloose/syntastic)
+ - [ale](https://github.com/w0rp/ale)
  - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
@@ -37,15 +39,15 @@ chsh -s $(which zsh)
 ```
 Note: you will need to logout and log back in for this to take effect
 
-- Ensure you have flake8 and pep257 installed (for vim-syntastic)
+- Ensure you have flake8 installed (for ale)
 ```
-sudo pip install flake8 pep257
+sudo pip install flake8
 ```
 - Ensure you have exuberant-ctags installed (for vim tags and tagbar)
 ```
 sudo apt-get install exuberant-ctags
 ```
-- Ensure you have eslint requirements installed (for vim-syntastic)
+- Ensure you have eslint requirements installed (for ale)
 ```
 sudo npm install -g eslint babel-eslint eslint-plugin-react
 ```
