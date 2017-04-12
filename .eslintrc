@@ -14,7 +14,6 @@
     "rules": {
         "eol-last": 2,
         "max-len": [2, 80, 4],
-        "no-var": 2,
         "react/display-name": 0,
         "react/jsx-boolean-value": 2,
         "react/jsx-no-undef": 2,
