@@ -187,3 +187,6 @@ nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPreviou
 nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
 nmap <silent> [e  <Plug>LocationPrevious
 nmap <silent> ]e  <Plug>LocationNext
+
+" Make swapfiles be kept in a central location to avoid polluting file system
+set directory^=$HOME/.vim/swapfiles//
