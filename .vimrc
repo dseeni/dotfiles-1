@@ -52,8 +52,8 @@ map <C-n> :NERDTreeTabsToggle<CR>
 let g:ctrlp_working_path_mode = ''
 " Ignore temp files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
-" Don't index inside node_modules
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|htmlcov)$'
+" Don't index inside node_modules or dist directories
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
 
 :set t_Co=256
 
