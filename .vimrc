@@ -190,3 +190,7 @@ nmap <silent> ]e  <Plug>LocationNext
 
 " Make swapfiles be kept in a central location to avoid polluting file system
 set directory^=$HOME/.vim/swapfiles//
+
+" Make tab completion work like bash
+set wildmode=longest:full,full
+set wildmenu
