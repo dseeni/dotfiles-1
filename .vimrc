@@ -2,7 +2,6 @@
 :set softtabstop=4
 :set shiftwidth=4        " number of spaces to use for auto indent
 :set autoindent          " copy indent from current line when starting a new line
-:set nu
 :set ai sw=4
 :set hlsearch            " highlight search result
 :set ignorecase          " ignore search case
@@ -13,6 +12,10 @@
 :set expandtab
 :set mouse=a
 :set wildmenu            " visual autocomplete for command menu
+
+" Use relative number mode - useful for jumping to specific lines of code
+:set relativenumber
+:set number
 
 " Make backspace work properly in insert mode
 set backspace=indent,eol,start
