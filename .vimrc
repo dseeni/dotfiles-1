@@ -17,6 +17,9 @@
 :set relativenumber
 :set number
 
+" Use system clipboard as default clipboard
+:set clipboard=unnamed
+
 " Make backspace work properly in insert mode
 set backspace=indent,eol,start
 
