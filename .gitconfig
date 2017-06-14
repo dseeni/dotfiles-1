@@ -1,0 +1,15 @@
+[user]
+    name = Tom Watson
+    email = tom@tomjwatson.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[color "status"]
+    added = green
+    changed = red
+    untracked = cyan
+[core]
+    editor = vim
+[push]
+    default = upstream
