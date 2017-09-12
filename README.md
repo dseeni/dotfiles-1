@@ -26,6 +26,10 @@ I've tested these dotfiles on both ubuntu and OS X (you'll need to fiddle with t
  - [vim-css-color](https://github.com/skammer/vim-css-color)
  - [vim-misc](https://github.com/xolox/vim-misc)
  - [vim-easytags](https://github.com/xolox/vim-easytags)
+ - [vim-obsession](https://github.com/tpope/vim-obsession)
+- TMUX plugins
+ - [tpm](https://github.com/tmux-plugins/tpm)
+ - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect)
 
 ## Requirements
 
