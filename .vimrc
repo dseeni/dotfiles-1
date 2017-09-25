@@ -78,7 +78,7 @@ hi Normal ctermbg=NONE
 
 " Set 80 column text width
 set colorcolumn=80
-highlight ColorColumn ctermbg=8
+highlight ColorColumn ctermbg=232
 
 " Function: Open tag under cursor in new tab C-\
 " Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
