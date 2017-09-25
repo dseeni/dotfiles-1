@@ -56,7 +56,7 @@ sudo apt-get install exuberant-ctags
 sudo npm install -g eslint babel-eslint eslint-plugin-react
 ```
 
-- Set your terminal background to `#585858` for best integration with tmux config
+- Set your terminal background to `#3a3a3a` for best integration with tmux config
 
 ## Installation
 
