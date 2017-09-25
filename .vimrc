@@ -61,6 +61,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " Don't index inside node_modules or dist directories
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
 
+" Use 256 colors
 :set t_Co=256
 
 if has('gui_running')
@@ -71,6 +72,9 @@ else
     " set colorscheme for terminal vim
     colorscheme termschool
 endif
+
+" Fix background color behaviour
+hi Normal ctermbg=NONE
 
 " Set 80 column text width
 set colorcolumn=80
