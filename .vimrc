@@ -1,8 +1,8 @@
-:set tabstop=4           " use 4 spaces to represent tab
-:set softtabstop=4
-:set shiftwidth=4        " number of spaces to use for auto indent
+:set tabstop=2           " use 4 spaces to represent tab
+:set softtabstop=2
+:set shiftwidth=2        " number of spaces to use for auto indent
 :set autoindent          " copy indent from current line when starting a new line
-:set ai sw=4
+:set ai sw=2
 :set hlsearch            " highlight search result
 :set ignorecase          " ignore search case
 :set smartcase           " unless you use capitals
