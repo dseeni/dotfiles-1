@@ -175,6 +175,10 @@ autocmd User GoyoLeave call <SID>goyo_leave()
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
 
+" Javascript / React improved highlighting/indentation
+let g:javascript_plugin_jsdoc = 1
+let g:jsx_ext_required = 0
+
 " Fix syntastic error jumping - make it wrap
 function! <SID>LocationPrevious()
     try
