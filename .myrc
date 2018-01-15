@@ -22,6 +22,9 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 # Alias for acking python src files more cleanly
 alias ack-src='ack --py --ignore-file=match:test --ignore-file=match:migrat --ignore-dir=_scripts'
 
+# Alias vi for vim. Not sure why but things such as ale-vim don't work properly
+alias vi='vim'
+
 # Setup Google Cloud SDK
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then source '/opt/google-cloud-sdk/path.zsh.inc'; fi
