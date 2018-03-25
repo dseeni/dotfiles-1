@@ -172,7 +172,7 @@ autocmd User GoyoLeave call <SID>goyo_leave()
 :set backupcopy=yes
 
 " ALE configuration
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript': ['eslint'], 'c': ['clang', 'clangtidy', 'clang-format']}
 let g:ale_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
 
 " Javascript / React improved highlighting/indentation
