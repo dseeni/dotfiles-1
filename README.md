@@ -15,7 +15,7 @@ I've tested these dotfiles on both ubuntu and OS X (you'll need to fiddle with t
  - [nerdtree](https://github.com/scrooloose/nerdtree)
  - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
  - [ale](https://github.com/w0rp/ale)
- - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
+ - [dracula](https://github.com/dracula/vim)
  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
  - [vim-airline](https://github.com/bling/vim-airline)

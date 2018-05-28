@@ -70,7 +70,7 @@ if has('gui_running')
     set guifont=Inconsolata\ 10
 else
     " set colorscheme for terminal vim
-    colorscheme termschool
+    colorscheme dracula
 endif
 
 " Fix background color behaviour
