@@ -49,7 +49,11 @@ sudo pip install flake8
 ```
 - Ensure you have exuberant-ctags installed (for vim tags and tagbar)
 ```
+linux:
 sudo apt-get install exuberant-ctags
+
+mac:
+brew install ctags
 ```
 - Ensure you have eslint requirements installed (for ale)
 ```
