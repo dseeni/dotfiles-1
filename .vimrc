@@ -41,6 +41,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Don't automatically comment next line on enter/o if already commenting
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
 " vim fugitive bindings
 nmap <leader>gs :Gstatus<cr>
 nmap <leader>gc :Gcommit<cr>
