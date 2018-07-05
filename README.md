@@ -11,17 +11,18 @@ I've tested these dotfiles on both ubuntu and OS X (you'll need to fiddle with t
 - custom config for vim, ack-grep, zsh and tmux
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - vim plugins:
+ - [ale](https://github.com/w0rp/ale)
  - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
  - [nerdtree](https://github.com/scrooloose/nerdtree)
  - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
- - [ale](https://github.com/w0rp/ale)
- - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
  - [vim-airline](https://github.com/bling/vim-airline)
  - [tagbar](https://github.com/majutsushi/tagbar)
  - [vim-css-color](https://github.com/skammer/vim-css-color)
  - [vim-misc](https://github.com/xolox/vim-misc)
  - [vim-easytags](https://github.com/xolox/vim-easytags)
+- vim colorschemes:
+ - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
 - TMUX plugins
  - [tpm](https://github.com/tmux-plugins/tpm)
  - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect)

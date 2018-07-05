@@ -137,13 +137,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 
 " tag file generation and syntax highlighting of tags
+Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 
 " show tags of current file in a window
 Plug 'majutsushi/tagbar'
-
-" colorscheme of choice
-Plug 'marcopaganini/termschool-vim-theme'
 
 " render css colours with the actual colour they represent
 Plug 'skammer/vim-css-color'
