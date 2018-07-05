@@ -1,3 +1,37 @@
+" ======== VIM-PLUG ========
+
+call plug#begin('~/.vim/plugged')
+
+" asynchronous code linting
+Plug 'w0rp/ale'
+
+" fuzzy file, buffer, mru, tag, etc finder
+Plug 'kien/ctrlp.vim'
+
+" tree-style file explorer
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" makes nerdtree work better with tab-based workflow
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
+
+" show git diff in the gutter, stage/revert hunks
+Plug 'airblade/vim-gitgutter'
+
+" powerful and lightweight status/tabline
+Plug 'bling/vim-airline'
+
+" tag file generation and syntax highlighting of tags
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+
+" show tags of current file in a window
+Plug 'majutsushi/tagbar'
+
+" render css colours with the actual colour they represent
+Plug 'skammer/vim-css-color'
+
+call plug#end()
+
 " ======== VISUAL ========
 
 " use 256 colors
@@ -113,40 +147,6 @@ map! <Esc>[1;5C <C-Right>
 
 " always write to existing file - prevents webpack watch flakiness
 :set backupcopy=yes
-
-" ======== VIM-PLUG ========
-
-call plug#begin('~/.vim/plugged')
-
-" asynchronous code linting
-Plug 'w0rp/ale'
-
-" fuzzy file, buffer, mru, tag, etc finder
-Plug 'kien/ctrlp.vim'
-
-" tree-style file explorer
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
-" makes nerdtree work better with tab-based workflow
-Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
-
-" show git diff in the gutter, stage/revert hunks
-Plug 'airblade/vim-gitgutter'
-
-" powerful and lightweight status/tabline
-Plug 'bling/vim-airline'
-
-" tag file generation and syntax highlighting of tags
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-
-" show tags of current file in a window
-Plug 'majutsushi/tagbar'
-
-" render css colours with the actual colour they represent
-Plug 'skammer/vim-css-color'
-
-call plug#end()
 
 " ======== NERDTREE ========
 
