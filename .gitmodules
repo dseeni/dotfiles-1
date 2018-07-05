@@ -1,60 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
-[submodule ".vim/bundle/goyo.vim"]
-	path = .vim/bundle/goyo.vim
-	url = https://github.com/junegunn/goyo.vim
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/bundle/vim-gitgutter"]
-	path = .vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
-[submodule ".vim/bundle/vim-nerdtree-tabs"]
-	path = .vim/bundle/vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script
-[submodule ".vim/bundle/vim-css-color"]
-	path = .vim/bundle/vim-css-color
-	url = https://github.com/ap/vim-css-color/
-[submodule ".vim/bundle/vim-autocorrect"]
-	path = .vim/bundle/vim-autocorrect
-	url = https://github.com/panozzaj/vim-autocorrect
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
-[submodule ".vim/bundle/vim-misc"]
-	path = .vim/bundle/vim-misc
-	url = https://github.com/xolox/vim-misc
-[submodule ".vim/bundle/vim-easytags"]
-	path = .vim/bundle/vim-easytags
-	url = https://github.com/xolox/vim-easytags
-[submodule ".vim/bundle/termschool-vim-theme"]
-	path = .vim/bundle/termschool-vim-theme
-	url = https://github.com/marcopaganini/termschool-vim-theme
-[submodule ".vim/bundle/ale"]
-	path = .vim/bundle/ale
-	url = https://github.com/w0rp/ale.git
-[submodule ".vim/bundle/vim-obsession"]
-	path = .vim/bundle/vim-obsession
-	url = git://github.com/tpope/vim-obsession.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
-[submodule ".vim/bundle/vim-jsx"]
-	path = .vim/bundle/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
-[submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git

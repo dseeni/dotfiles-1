@@ -1,113 +1,67 @@
-:set tabstop=2           " use 4 spaces to represent tab
+" ======== VISUAL ========
+
+" use 256 colors
+:set t_Co=256
+
+" set colorscheme to termschool
+colorscheme termschool
+
+" fix background color behaviour
+hi Normal ctermbg=NONE
+
+" render a column at 80 characters
+set colorcolumn=80
+highlight ColorColumn ctermbg=232
+
+" ======== EDITING ========
+
+" use 4 spaces to represent tab
+:set tabstop=2
 :set softtabstop=2
-:set shiftwidth=2        " number of spaces to use for auto indent
-:set autoindent          " copy indent from current line when starting a new line
-:set ai sw=2
-:set hlsearch            " highlight search result
-:set ignorecase          " ignore search case
-:set smartcase           " unless you use capitals
-:set scrolloff=5
-:set fileformat=unix
-:set tabpagemax=50
+" number of spaces to use for auto indent
+:set shiftwidth=2
+" copy indent from current line when starting a new line
+:set autoindent
+" expand tabs to spaces
 :set expandtab
-:set mouse=a
-:set wildmenu            " visual autocomplete for command menu
 
-" Use relative number mode - useful for jumping to specific lines of code
-:set relativenumber
-:set number
+" make backspace work like you'd expect in insert mode
+:set backspace=indent,eol,start
 
-" Use system clipboard as default clipboard
+" use system clipboard as default clipboard
 :set clipboard=unnamed
 
-" Make backspace work properly in insert mode
-set backspace=indent,eol,start
+" number of lines to keep above and below the cursor
+:set scrolloff=5
 
-" Make searches appear in centre of page
+" show line numbers
+:set number
+" make line numbers relative to the current line
+:set relativenumber
+
+" highlight search result
+:set hlsearch
+" ignore search case
+:set ignorecase
+" unless you use capitals
+:set smartcase
+" make sarches always appear in centre of page
 :nnoremap n nzz
 :nnoremap N Nzz
 :nnoremap * *zz
 :nnoremap # #zz
 :nnoremap g* g*zz
 :nnoremap g# g#zz
-
-" Clear search highlighting with enter
+" clear search highlighting with enter
 nnoremap <cr> :noh<CR><CR>:<backspace>
 
 " F9 to toggle paste mode
 :nnoremap <silent><F9> :set paste!<CR>
 
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
-" Don't automatically comment next line on enter/o if already commenting
+" don't automatically comment next line on enter/o if already commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
-" vim fugitive bindings
-nmap <leader>gs :Gstatus<cr>
-nmap <leader>gc :Gcommit<cr>
-nmap <leader>ga :Gwrite<cr>
-nmap <leader>gl :Glog<cr>
-nmap <leader>gd :Gdiff<cr>
-nmap <leader>gb :Gblame<cr>
-
-" NERDTreeTabs
-map <C-n> :NERDTreeTabsToggle<CR>
-" let g:nerdtree_tabs_open_on_console_startup=1
-
-" CtrlP
-" Only search for things under the directory that you opened vim from
-let g:ctrlp_working_path_mode = ''
-" Ignore temp files
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
-" Don't index inside node_modules or dist directories
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
-
-" Use 256 colors
-:set t_Co=256
-
-if has('gui_running')
-    " set colorscheme and font size for gvim
-    colorscheme desert
-    set guifont=Inconsolata\ 10
-else
-    " set colorscheme for terminal vim
-    colorscheme termschool
-endif
-
-" Fix background color behaviour
-hi Normal ctermbg=NONE
-
-" Set 80 column text width
-set colorcolumn=80
-highlight ColorColumn ctermbg=232
-
-" Function: Open tag under cursor in new tab C-\
-" Source:   http://stackoverflow.com/questions/563616/vimctags-tips-and-tricks
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
-" tmux hacks
-" inside screen / tmux
-map <Esc>[C <C-Right>
-map <Esc>[D <C-Left>
-" insert mode
-map! <Esc>[C <C-Right>
-map! <Esc>[D <C-Left>
-" no screen
-map <Esc>[1;5D <C-Left>
-map <Esc>[1;5C <C-Right>
-" insert mode
-map! <Esc>[1;5D <C-Left>
-map! <Esc>[1;5C <C-Right>
-" Switch tabs with Ctrl left and right
-nnoremap <C-right> :tabnext<CR>
-nnoremap <C-left> :tabprevious<CR>
-" insert mode
-inoremap <C-right> <Esc>:tabnext<CR>
-inoremap <C-left> <Esc>:tabprevious<CR>
-
-" Automatically strip trailing whitespace
+" automatically strip trailing whitespace
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
@@ -116,65 +70,125 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" Hack to show status bar
+" ======== MISCELLANEOUS ========
+
+" force unix fileformat
+:set fileformat=unix
+
+" enable mouse selection
+:set mouse=a
+
+" increase max number of files you can open as tabs with -p command line option
+:set tabpagemax=50
+
+" make swapfiles be kept in a central location to avoid polluting file system
+set directory^=$HOME/.vim/swapfiles//
+
+" use undodir for persistent undoing across file closure
+set undodir=~/.vim/undodir
+set undofile
+
+" visual autocomplete for command menu
+:set wildmenu
+" make tab completion in wildmenu work like bash
+set wildmode=longest:full,full
+set wildmenu
+
+" switch tabs with Ctrl left and right
+nnoremap <C-right> :tabnext<CR>
+nnoremap <C-left> :tabprevious<CR>
+" and whilst in insert mode
+inoremap <C-right> <Esc>:tabnext<CR>
+inoremap <C-left> <Esc>:tabprevious<CR>
+" and whilst inside screen / tmux
+map <Esc>[C <C-Right>
+map <Esc>[D <C-Left>
+map <Esc>[1;5D <C-Left>
+map <Esc>[1;5C <C-Right>
+" and whilst inside screen / tmux and insert mode
+map! <Esc>[C <C-Right>
+map! <Esc>[D <C-Left>
+map! <Esc>[1;5D <C-Left>
+map! <Esc>[1;5C <C-Right>
+
+" always write to existing file - prevents webpack watch flakiness
+:set backupcopy=yes
+
+" ======== VIM-PLUG ========
+
+call plug#begin('~/.vim/plugged')
+
+" asynchronous code linting
+Plug 'w0rp/ale'
+
+" fuzzy file, buffer, mru, tag, etc finder
+Plug 'kien/ctrlp.vim'
+
+" tree-style file explorer
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" makes nerdtree work better with tab-based workflow
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
+
+" show git diff in the gutter, stage/revert hunks
+Plug 'airblade/vim-gitgutter'
+
+" powerful and lightweight status/tabline
+Plug 'bling/vim-airline'
+
+" tag file generation and syntax highlighting of tags
+Plug 'xolox/vim-easytags'
+
+" show tags of current file in a window
+Plug 'majutsushi/tagbar'
+
+" colorscheme of choice
+Plug 'marcopaganini/termschool-vim-theme'
+
+" render css colours with the actual colour they represent
+Plug 'skammer/vim-css-color'
+
+call plug#end()
+
+" ======== NERDTREE ========
+
+" set toggle to C-n
+map <C-n> :NERDTreeTabsToggle<CR>
+
+" ======== CTRLP ========
+
+" only search for things under the directory that you opened vim from
+let g:ctrlp_working_path_mode = ''
+
+" ignore temp files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
+
+" don't index inside node_modules or dist directories
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
+
+" ======== STATUS BAR ========
+
+" always show status bar
 set laststatus=2
-" Enable vim-airline plugins
+" enable vim-airline plugins
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 
-" Toggle Tagbar
-nmap <F8> :TagbarToggle<CR>
+" ======== TAGS ========
 
-" Goyo optimisations
-function! s:goyo_enter()
-  let b:quitting = 0
-  let b:quitting_bang = 0
-  autocmd QuitPre <buffer> let b:quitting = 1
-  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
-  if exists('$TMUX') " hide tmux status bar
-    silent !tmux set status off
-  endif
-  :setlocal spell spelllang=en_gb " enable spellchecker
-  :set linebreak " break lines
-  " allow navigation within softlines
-  imap <silent> <Down> <C-o>gj
-  imap <silent> <Up> <C-o>gk
-  nmap <silent> <Down> gj
-  nmap <silent> <Up> gk
-  :call AutoCorrect() " load autocorrections
-endfunction
-
-function! s:goyo_leave()
-  " Quit Vim if this is the only remaining buffer
-  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    if b:quitting_bang
-      qa!
-    else
-      qa
-    endif
-  endif
-  if exists('$TMUX') " reenable tmux status bar
-    silent !tmux set status on
-  endif
-  :set nospell " disable spellchecker
-  :set linebreak!
-  :unmap <Down>
-  :unmap <Up>
-endfunction
-
-autocmd User GoyoEnter call <SID>goyo_enter()
-autocmd User GoyoLeave call <SID>goyo_leave()
-
-" Settings for vim-easytags
 :let g:easytags_async = 1
 :let g:easytags_auto_highlight = 0
 
-" Always write to existing file - prevents webpack watch flakiness
-:set backupcopy=yes
+" Toggle Tagbar
+nmap <F8> :TagbarToggle<CR>
 
-" ALE configuration
+" open tag under cursor in new tab with C-\
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" ======== LINTING ========
+
 let g:ale_linters = {'javascript': ['eslint'], 'c': ['clang', 'clangtidy', 'clang-format']}
 let g:ale_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
 
@@ -182,7 +196,12 @@ let g:ale_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-leng
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 
-" Fix syntastic error jumping - make it wrap
+" map error jumping to [e and ]e
+nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
+nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
+nmap <silent> [e  <Plug>LocationPrevious
+nmap <silent> ]e  <Plug>LocationNext
+" make error jumping wrap
 function! <SID>LocationPrevious()
     try
         lprev
@@ -190,7 +209,6 @@ function! <SID>LocationPrevious()
         llast
     endtry
 endfunction
-
 function! <SID>LocationNext()
     try
         lnext
@@ -198,20 +216,3 @@ function! <SID>LocationNext()
         lfirst
     endtry
 endfunction
-
-" Map error jumping to [ or ] + e
-nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
-nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
-nmap <silent> [e  <Plug>LocationPrevious
-nmap <silent> ]e  <Plug>LocationNext
-
-" Make swapfiles be kept in a central location to avoid polluting file system
-set directory^=$HOME/.vim/swapfiles//
-
-" Use undodir for persistent undoing
-set undodir=~/.vim/undodir
-set undofile
-
-" Make tab completion work like bash
-set wildmode=longest:full,full
-set wildmenu
