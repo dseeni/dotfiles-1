@@ -2,7 +2,7 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-function doIt() {
+function update() {
     echo "Resetting local files..."
     git reset --hard
     echo "Updating to latest version..."
@@ -20,12 +20,12 @@ function doIt() {
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-    doIt;
+    update;
 else
     read -p "This will destroy local changes to this directory and may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
     echo "";
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        doIt;
+        update;
     fi;
 fi;
-unset doIt;
+unset update;

@@ -2,7 +2,7 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-function doIt() {
+function install() {
     echo "Installing submodules..."
     git submodule update --init
     echo "Syncing dotfiles to home directory..."
@@ -13,12 +13,12 @@ function doIt() {
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
-    doIt;
+    install;
 else
     read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
     echo "";
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        doIt;
+        install;
     fi;
 fi;
-unset doIt;
+unset install;
