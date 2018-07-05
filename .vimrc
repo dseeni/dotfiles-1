@@ -27,9 +27,6 @@ Plug 'xolox/vim-easytags'
 " show tags of current file in a window
 Plug 'majutsushi/tagbar'
 
-" render css colours with the actual colour they represent
-Plug 'skammer/vim-css-color'
-
 call plug#end()
 
 " ======== VISUAL ========

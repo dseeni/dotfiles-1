@@ -18,8 +18,6 @@ I've tested these dotfiles on both ubuntu and OS X.
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
  - [vim-airline](https://github.com/bling/vim-airline)
  - [tagbar](https://github.com/majutsushi/tagbar)
- - [vim-css-color](https://github.com/skammer/vim-css-color)
- - [vim-misc](https://github.com/xolox/vim-misc)
  - [vim-easytags](https://github.com/xolox/vim-easytags)
 - vim colorschemes:
  - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
