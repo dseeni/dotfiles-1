@@ -1,5 +1,7 @@
 # dotfiles
 
+![my setup](./screenshot.png)
+
 These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (python/Javascript) developer.
 
 I've tested these dotfiles on both ubuntu and OS X.
