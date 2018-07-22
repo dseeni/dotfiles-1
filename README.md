@@ -26,6 +26,7 @@ I've tested these dotfiles on both ubuntu and OS X.
 - TMUX plugins
  - [tpm](https://github.com/tmux-plugins/tpm)
  - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect)
+ - [tmux-yank](https://github.com/tmux-plugins/tmux-yank)
 
 ## Requirements
 
@@ -71,7 +72,10 @@ cd dotfiles
 
 ./install.sh
 ```
-- Then, to install the vim plugins, open vim and run
+
+- To install the tmux plugins, start tmux and run `prefix` + <kbd>I</kbd>.
+
+- To install the vim plugins, open vim and run
 ```
 :PlugInstall
 ```
