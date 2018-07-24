@@ -24,6 +24,11 @@ Plug 'bling/vim-airline'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 
+" improved javascript/jsx/typescript support
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+
 " show tags of current file in a window
 Plug 'majutsushi/tagbar'
 
@@ -184,7 +189,7 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " ======== LINTING ========
 
-let g:ale_linters = {'javascript': ['eslint'], 'c': ['clang', 'clangtidy', 'clang-format']}
+let g:ale_linters = {'javascript': ['eslint'], 'c': ['clang', 'clangtidy', 'clang-format'], 'typescript': ['eslint']}
 let g:ale_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
 
 " Javascript / React improved highlighting/indentation

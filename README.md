@@ -21,6 +21,9 @@ I've tested these dotfiles on both ubuntu and OS X.
   - [vim-airline](https://github.com/bling/vim-airline)
   - [tagbar](https://github.com/majutsushi/tagbar)
   - [vim-easytags](https://github.com/xolox/vim-easytags)
+  - [vim-javascript](https://github.com/pangloss/vim-javascript)
+  - [vim-jsx](https://github.com/mxw/vim-jsx)
+  - [typescript-vim](https://github.com/leafgarland/typescript-vim)
 - vim colorschemes:
   - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
 - TMUX plugins
