@@ -61,7 +61,7 @@ brew install ctags
 ```
 - Ensure you have eslint requirements installed (for ale js linting)
 ```
-sudo npm install -g eslint babel-eslint eslint-plugin-react
+sudo npm install -g eslint eslint-config-tomjwatson
 ```
 - Set your terminal background to `#3a3a3a` for best integration with tmux config
 

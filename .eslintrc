@@ -1,40 +1,5 @@
 {
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "settings": {
-        "ecmascript": 6,
-        "jsx": true
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "eol-last": 2,
-        "max-len": [2, 80, 4],
-        "react/display-name": 0,
-        "react/jsx-boolean-value": 2,
-        "react/jsx-no-undef": 2,
-        "react/jsx-sort-props": 0,
-        "react/jsx-uses-react": 2,
-        "react/jsx-uses-vars": 2,
-        "react/no-did-mount-set-state": 2,
-        "react/no-did-update-set-state": 2,
-        "react/no-multi-comp": 0,
-        "react/no-unknown-property": 2,
-        "react/prop-types": 2,
-        "react/react-in-jsx-scope": 2,
-        "react/self-closing-comp": 2,
-        "react/wrap-multilines": 2,
-        "quotes": [2, "single"],
-        "indent": [2, 4, { "SwitchCase": 1 }],
-        "semi": [2, "always"],
-        "no-extra-semi": 2,
-        "strict": 1,
-        "no-unused-vars": 1,
-        "camelcase": 1,
-        "no-underscore-dangle": 1,
-    }
+  "extends": [
+    "eslint-config-tomjwatson",
+  ]
 }
