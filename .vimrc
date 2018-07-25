@@ -9,10 +9,10 @@ Plug 'w0rp/ale'
 Plug 'kien/ctrlp.vim'
 
 " tree-style file explorer
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeTabsToggle' }
 
 " makes nerdtree work better with tab-based workflow
-Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeToggle' }
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle' }
 
 " show git diff in the gutter, stage/revert hunks
 Plug 'airblade/vim-gitgutter'
