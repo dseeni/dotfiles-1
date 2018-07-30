@@ -6,8 +6,6 @@ These dotfiles contain all of the necessary packages, plugins and config I need 
 
 I've tested these dotfiles on both ubuntu and OS X.
 
-**NOTE - you will need vim version 8.0 or higher.**
-
 ## Contents
 
 - custom config for vim/nvim, ack-grep, zsh, eslint, tmux and kitty
@@ -34,6 +32,8 @@ I've tested these dotfiles on both ubuntu and OS X.
 ## Requirements
 
 - These dotfiles are designed to work best with the Kitty terminal emulator. Download and install the latest binaries here - https://sw.kovidgoyal.net/kitty/binary.html
+
+- Ensure you have either vim >= 8.0 or neovim installed
 
 - Ensure you have zsh installed
 ```
