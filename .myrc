@@ -7,7 +7,7 @@ fnd(){
 }
 
 # fix tmux vim colours
-export TERM=xterm-256color
+export TERM=xterm-kitty
 
 # Efficient image resize tool using imagemagick - taken from https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
 smartresize() {

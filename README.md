@@ -1,8 +1,8 @@
 # dotfiles
 
-![my setup](./screenshot.png)
+These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript) developer. They mostly concern [Kitty](https://sw.kovidgoyal.net/kitty), zsh, tmux and vim.
 
-These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (python/Javascript) developer.
+![my setup](./screenshot.png)
 
 I've tested these dotfiles on both ubuntu and OS X.
 
@@ -10,7 +10,7 @@ I've tested these dotfiles on both ubuntu and OS X.
 
 ## Contents
 
-- custom config for vim, ack-grep, zsh, eslint and tmux
+- custom config for vim/nvim, ack-grep, zsh, eslint, tmux and kitty
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - vim plugins:
   - [ale](https://github.com/w0rp/ale)
@@ -32,6 +32,8 @@ I've tested these dotfiles on both ubuntu and OS X.
   - [tmux-yank](https://github.com/tmux-plugins/tmux-yank)
 
 ## Requirements
+
+- These dotfiles are designed to work best with the Kitty terminal emulator. Download and install the latest binaries here - https://sw.kovidgoyal.net/kitty/binary.html
 
 - Ensure you have zsh installed
 ```
