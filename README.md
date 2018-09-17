@@ -1,6 +1,6 @@
 # dotfiles
 
-These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript) developer. They mostly concern [Kitty](https://sw.kovidgoyal.net/kitty), zsh, tmux and vim.
+These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript) developer. They mostly concern [Kitty](https://sw.kovidgoyal.net/kitty), [fish](https://fishshell.com/), tmux and vim.
 
 ![my setup](./screenshot.png)
 
@@ -8,8 +8,7 @@ I've tested these dotfiles on both ubuntu and OS X.
 
 ## Contents
 
-- custom config for vim/nvim, ack-grep, zsh, eslint, tmux and kitty
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+- custom config for vim/nvim, ack-grep, fish, eslint, tmux and kitty
 - vim plugins:
   - [ale](https://github.com/w0rp/ale)
   - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
@@ -35,17 +34,18 @@ I've tested these dotfiles on both ubuntu and OS X.
 
 - Ensure you have either vim >= 8.0 or neovim installed
 
-- Ensure you have zsh installed
+- Ensure you have fish installed
 ```
 linux:
-sudo apt-get install zsh
+sudo apt-get install fish
 
 mac:
-brew install zsh
+brew install fish
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
 ```
-- Ensure zsh is set as your default shell:
+- Ensure fish is set as your default shell:
 ```
-chsh -s $(which zsh)
+chsh -s $(which fish)
 ```
 Note: you will need to logout and log back in for this to take effect
 
