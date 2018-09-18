@@ -40,3 +40,5 @@ alias ag='ag --hidden'
 if test -f ~/.awsrc
     . ~/.awsrc;
 end
+
+. ~/.config/fish/z.fish
