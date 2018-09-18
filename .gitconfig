@@ -11,5 +11,6 @@
     untracked = cyan
 [core]
     editor = vim
+    pager = less -+X
 [push]
     default = upstream
