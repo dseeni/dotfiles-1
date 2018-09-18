@@ -15,7 +15,7 @@ I've tested these dotfiles on both ubuntu and OS X.
   - [nerdtree](https://github.com/scrooloose/nerdtree)
   - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
   - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-  - [vim-airline](https://github.com/bling/vim-airline)
+  - [lightline.vim](https://github.com/itchyny/lightline.vim)
   - [tagbar](https://github.com/majutsushi/tagbar)
   - [vim-easytags](https://github.com/xolox/vim-easytags)
   - [vim-javascript](https://github.com/pangloss/vim-javascript)
