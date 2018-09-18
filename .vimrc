@@ -24,8 +24,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 
-" improved javascript/jsx/typescript support
-Plug 'pangloss/vim-javascript'
+" improved jsx/typescript support
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 
