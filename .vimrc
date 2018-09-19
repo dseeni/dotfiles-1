@@ -174,6 +174,8 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
+" don't show -- INSERT --, pointless as we have a status bar
+set noshowmode
 
 " ======== TAGS ========
 
