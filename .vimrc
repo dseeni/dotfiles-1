@@ -18,7 +18,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle' }
 Plug 'airblade/vim-gitgutter'
 
 " powerful and lightweight status/tabline
-Plug 'itchyny/lightline.vim'
+Plug 'bling/vim-airline'
 
 " tag file generation and syntax highlighting of tags
 Plug 'xolox/vim-misc'
@@ -169,8 +169,11 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
 
 " always show status bar
 set laststatus=2
-" don't show -- INSERT --, pointless as we have a status bar
-set noshowmode
+" enable vim-airline plugins
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
 
 " ======== TAGS ========
 
