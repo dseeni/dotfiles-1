@@ -31,6 +31,12 @@ Plug 'leafgarland/typescript-vim'
 " show tags of current file in a window
 Plug 'majutsushi/tagbar'
 
+" language server autocompletion
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 call plug#end()
 
 " ======== VISUAL ========
@@ -87,8 +93,6 @@ highlight ColorColumn ctermbg=232
 :nnoremap # #zz
 :nnoremap g* g*zz
 :nnoremap g# g#zz
-" clear search highlighting with enter
-nnoremap <cr> :noh<CR><CR>:<backspace>
 
 " F9 to toggle paste mode
 :nnoremap <silent><F9> :set paste!<CR>
@@ -187,6 +191,37 @@ nmap <F8> :TagbarToggle<CR>
 
 " open tag under cursor in new tab with C-\
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" ======== COMPLETION ========
+
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+if executable('pyls')
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+
+au User lsp_setup call lsp#register_server({
+      \ 'name': 'typescript-language-server',
+      \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+      \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+      \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
+      \ })
+
+if executable('rls')
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
 
 " ======== LINTING ========
 

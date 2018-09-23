@@ -48,9 +48,9 @@ chsh -s $(which fish)
 ```
 Note: you will need to logout and log back in for this to take effect
 
-- Ensure you have flake8 installed (for ale python linting)
+- Ensure you have flake8 (for ale python linting) and python-language-server (autocompletion) installed
 ```
-sudo pip install flake8
+sudo pip install flake8 python-language-server
 ```
 - Ensure you have exuberant-ctags installed (for vim tags and tagbar)
 ```
@@ -60,9 +60,9 @@ sudo apt-get install exuberant-ctags
 mac:
 brew install ctags
 ```
-- Ensure you have eslint requirements installed (for ale js linting)
+- Ensure you have JS/TS language server and eslint requirements installed
 ```
-sudo npm install -g eslint eslint-config-tomjwatson
+sudo npm install -g eslint eslint-config-tomjwatson typescript-language-server typescript
 ```
 - Set your terminal background to `#3a3a3a` for best integration with tmux config
 
