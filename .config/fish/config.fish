@@ -23,6 +23,9 @@ set -gx PATH ~/dev/flutter/bin $PATH
 # Set up Postgres
 set -gx PATH /Library/PostgreSQL/10/bin/ $PATH
 
+# Set up Rust
+set -gx PATH ~/.cargo/bin $PATH
+
 # Alias for acking python src files more cleanly
 alias ack-src='ack --py --ignore-file=match:test --ignore-file=match:migrat --ignore-dir=_scripts'
 
