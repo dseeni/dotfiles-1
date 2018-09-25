@@ -93,6 +93,8 @@ highlight ColorColumn ctermbg=232
 :nnoremap # #zz
 :nnoremap g* g*zz
 :nnoremap g# g#zz
+" clear search highlighting with enter
+nnoremap <cr> :noh<CR><CR>:<backspace>
 
 " F9 to toggle paste mode
 :nnoremap <silent><F9> :set paste!<CR>

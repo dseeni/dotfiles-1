@@ -1,6 +1,6 @@
 # Quick find shortcut
 function fnd
-  find ./ -iname "*$1*"
+  find ./ -iname "*$argv[1]*"
 end
 
 # Efficient image resize tool using imagemagick - taken from https://www.smashingmagazine.com/2015/06/efficient-image-resizing-with-imagemagick/
