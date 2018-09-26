@@ -80,6 +80,9 @@ highlight ColorColumn ctermbg=232
 " make line numbers relative to the current line
 :set relativenumber
 
+" always show the sign column, e.g. where lint errors are marked
+set signcolumn=yes
+
 " highlight search result
 :set hlsearch
 " ignore search case
