@@ -31,11 +31,20 @@ Plug 'leafgarland/typescript-vim'
 " show tags of current file in a window
 Plug 'majutsushi/tagbar'
 
-" language server autocompletion
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" LanguageServer client
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+" code completion, powered by LanguageClient-neovim
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 call plug#end()
 
@@ -194,39 +203,40 @@ set noshowmode
 " Toggle Tagbar
 nmap <F8> :TagbarToggle<CR>
 
-" open tag under cursor in new tab with C-\
+" open tag under cursor in new tab with ctrl-\
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " ======== COMPLETION ========
 
-imap <c-space> <Plug>(asyncomplete_force_refresh)
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" start deoplete on startup
+let g:deoplete#enable_at_startup = 1
 
-if executable('pyls')
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
+" don't automaitcally auto complete
+call deoplete#custom#option('auto_complete', 0)
 
-au User lsp_setup call lsp#register_server({
-      \ 'name': 'typescript-language-server',
-      \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-      \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
-      \ 'whitelist': ['typescript', 'javascript', 'javascript.jsx']
-      \ })
+" invoke omnifunc with ctrl-l
+:inoremap <C-l> <C-x><C-o>
 
-if executable('rls')
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'rls',
-        \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-        \ 'whitelist': ['rust'],
-        \ })
-endif
+" required for operations modifying multiple buffers like rename.
+set hidden
+
+" F5 to bring up language client context menu
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" K to bring up documentation for thing under cursor
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+" gd to go to definition of thing under cursor
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+" F2 for language server rename
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+" define what binaries to use for each LanguageServer
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'typescript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ }
 
 " ======== LINTING ========
 

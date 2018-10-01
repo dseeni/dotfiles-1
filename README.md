@@ -42,6 +42,7 @@ mac:
 brew install fish
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 ```
+
 - Ensure fish is set as your default shell:
 ```
 chsh -s $(which fish)
@@ -52,6 +53,12 @@ Note: you will need to logout and log back in for this to take effect
 ```
 sudo pip install flake8 python-language-server
 ```
+
+- Ensure you have the python3 neovim interface installed
+```
+pip3 install neovim
+```
+
 - Ensure you have exuberant-ctags installed (for vim tags and tagbar)
 ```
 linux:
@@ -60,10 +67,12 @@ sudo apt-get install exuberant-ctags
 mac:
 brew install ctags
 ```
+
 - Ensure you have JS/TS language server and eslint requirements installed
 ```
 sudo npm install -g eslint eslint-config-tomjwatson typescript-language-server typescript
 ```
+
 - Set your terminal background to `#3a3a3a` for best integration with tmux config
 
 ## Installation
