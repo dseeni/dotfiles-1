@@ -20,6 +20,7 @@ I've tested these dotfiles on both ubuntu and OS X.
   - [vim-easytags](https://github.com/xolox/vim-easytags)
   - [vim-jsx](https://github.com/mxw/vim-jsx)
   - [typescript-vim](https://github.com/leafgarland/typescript-vim)
+  - [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim)
 - vim colorschemes:
   - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
 - TMUX plugins
@@ -70,7 +71,7 @@ brew install ctags
 
 - Ensure you have JS/TS language server and eslint requirements installed
 ```
-sudo npm install -g eslint eslint-config-tomjwatson typescript-language-server typescript
+sudo npm install -g eslint eslint-config-tomjwatson javascript-typescript-stdio typescript-language-server typescript
 ```
 
 - Set your terminal background to `#3a3a3a` for best integration with tmux config

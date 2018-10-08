@@ -37,15 +37,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
-" code completion, powered by LanguageClient-neovim
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 call plug#end()
 
 " ======== VISUAL ========
@@ -208,17 +199,15 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " ======== COMPLETION ========
 
-" start deoplete on startup
-let g:deoplete#enable_at_startup = 1
+" invoke omni completion with ctrl-l
+inoremap <C-l> <C-x><C-o>
 
-" don't automaitcally auto complete
-call deoplete#custom#option('auto_complete', 0)
+" use jk for selecting omni completion entries
+inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
+inoremap <expr> k pumvisible() ? '<C-p>' : 'k'
 
-" invoke omnifunc with ctrl-l
-:inoremap <C-l> <C-x><C-o>
-
-" required for operations modifying multiple buffers like rename.
-set hidden
+" select omni completion entry with enter (always supress newline)
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 " F5 to bring up language client context menu
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
@@ -228,6 +217,8 @@ nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 " F2 for language server rename
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+" required for operations modifying multiple buffers like rename.
+set hidden
 
 " define what binaries to use for each LanguageServer
 let g:LanguageClient_serverCommands = {
