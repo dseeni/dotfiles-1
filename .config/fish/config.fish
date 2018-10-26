@@ -14,17 +14,25 @@ function alt
 end
 
 # Set up Android Studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-set -gx PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $PATH
+if test -e ~/.foobar
+  export ANDROID_HOME=$HOME/Library/Android/sdk
+  set -gx PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $PATH
+end
 
 # Set up flutter
-set -gx PATH ~/dev/flutter/bin $PATH
+if test -d ~/dev/flutter/bin
+  set -gx PATH ~/dev/flutter/bin $PATH
+end
 
 # Set up Postgres
-set -gx PATH /Library/PostgreSQL/10/bin/ $PATH
+if test -d /Library/PostgreSQL/10/bin/
+  set -gx PATH /Library/PostgreSQL/10/bin/ $PATH
+end
 
 # Set up Rust
-set -gx PATH ~/.cargo/bin $PATH
+if test -d ~/.cargo/bin
+  set -gx PATH ~/.cargo/bin $PATH
+end
 
 # Alias for acking python src files more cleanly
 alias ack-src='ack --py --ignore-file=match:test --ignore-file=match:migrat --ignore-dir=_scripts'
