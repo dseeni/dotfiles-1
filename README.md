@@ -44,11 +44,13 @@ brew install fish
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 ```
 
-- Ensure fish is set as your default shell:
+- On macOS, set fish as your default shell:
 ```
 chsh -s $(which fish)
 ```
-Note: you will need to logout and log back in for this to take effect
+You will need to logout and log back in for this to take effect.
+
+On linux, weird things happen if you set fish as the default shell, so instead we set fish as the default command for tmux. You can also set fish as the defalt command to run in your terminal emulator, for if you are not using tmux.
 
 - Ensure you have flake8 (for ale python linting) and python-language-server (autocompletion) installed
 ```
