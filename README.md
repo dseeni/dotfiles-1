@@ -1,10 +1,10 @@
 # dotfiles
 
-These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript) developer. They mostly concern [Kitty](https://sw.kovidgoyal.net/kitty), [fish](https://fishshell.com/), tmux and vim.
+These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript/Rust/C) developer. They mostly concern vim, tmux, [Kitty](https://sw.kovidgoyal.net/kitty) and [fish](https://fishshell.com/).
 
 ![my setup](./screenshot.png)
 
-I've tested these dotfiles on both ubuntu and OS X.
+I've tested these dotfiles on both ubuntu and macOS.
 
 ## Contents
 
@@ -28,9 +28,10 @@ I've tested these dotfiles on both ubuntu and OS X.
 
 ## Requirements
 
-- These dotfiles are designed to work best with the Kitty terminal emulator. Download and install the latest binaries here - https://sw.kovidgoyal.net/kitty/binary.html
-
 - Ensure you have either vim >= 8.0 or neovim installed
+
+These dotfiles are designed to work best with the Kitty terminal emulator, although any other emulator can be used.
+- Download and install the latest kitty binaries here - https://sw.kovidgoyal.net/kitty/binary.html. If you want to use a different terminal emulator, configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config.
 
 - Ensure you have fish installed
 ```
@@ -48,14 +49,14 @@ chsh -s $(which fish)
 ```
 You will need to logout and log back in for this to take effect.
 
-On linux, weird things happen if you set fish as the default shell, so instead we set fish as the default command for tmux. You can also set fish as the defalt command to run in your terminal emulator, for if you are not using tmux.
+On linux, weird things happen if you set fish as the default shell, so instead [we have set fish][./.tmux-linux.conf] as the default command for tmux. You can also set fish as the defalt command to run in your terminal emulator, for if you are not using tmux.
 
 - Ensure you have flake8 (for ale python linting) and python-language-server (autocompletion) installed
 ```
 sudo pip install flake8 python-language-server
 ```
 
-- Ensure you have the python3 neovim interface installed
+- Ensure you have the python3 neovim interface installed, if you want to use neovim
 ```
 pip3 install neovim
 ```
@@ -73,8 +74,6 @@ brew install ctags
 ```
 sudo npm install -g eslint eslint-config-tomjwatson javascript-typescript-stdio typescript-language-server typescript
 ```
-
-- Set your terminal background to `#3a3a3a` for best integration with tmux config
 
 ## Installation
 
@@ -96,6 +95,14 @@ cd dotfiles
 
 ## Updating
 
+- Pull the latest configs from git and install them
+
 ```
 ./update.sh
+```
+
+- To update all vim plugins, open vim and run
+
+```
+:PlugUpdate
 ```
