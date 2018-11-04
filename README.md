@@ -10,21 +10,22 @@ I've tested these dotfiles on both ubuntu and macOS.
 
 - custom config for vim/nvim, ack-grep, fish, eslint, tmux and kitty
 - vim plugins:
-  - [ale](https://github.com/w0rp/ale)
-  - [ctrlp.vim](https://github.com/kien/ctrlp.vim)
-  - [nerdtree](https://github.com/scrooloose/nerdtree)
-  - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
-  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-  - [vim-airline](https://github.com/bling/vim-airline)
-  - [vim-easytags](https://github.com/xolox/vim-easytags)
-  - [vim-polyglot](https://github.com/sheerun/vim-polyglot)
-  - [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim)
+  - [ale](https://github.com/w0rp/ale) - asynchronous code linting
+  - [ctrlp.vim](https://github.com/kien/ctrlp.vim) - fuzzy file, buffer, mru, tag, etc finder
+  - [nerdtree](https://github.com/scrooloose/nerdtree) - tree-style file explorer
+  - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs) - makes nerdtree work better with tab-based workflow
+  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - show git diff in the gutter, stage/revert hunks
+  - [vim-airline](https://github.com/bling/vim-airline) - powerful and lightweight status/tabline
+  - [vim-easytags](https://github.com/xolox/vim-easytags) - tag file generation and syntax highlighting of tags
+  - [tagbar](https://github.com/majutsushi/tagbar) - show tags of current file in a window
+  - [vim-polyglot](https://github.com/sheerun/vim-polyglot) - improved syntax highlighting
+  - [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim) - LanguageServer client for intelligent autocomplete
 - vim colorschemes:
-  - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
+  - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme) - termschool color scheme
 - TMUX plugins
-  - [tpm](https://github.com/tmux-plugins/tpm)
-  - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect)
-  - [tmux-yank](https://github.com/tmux-plugins/tmux-yank)
+  - [tpm](https://github.com/tmux-plugins/tpm) - tmux plugin manager
+  - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) - persists tmux environment across system restarts
+  - [tmux-yank](https://github.com/tmux-plugins/tmux-yank) - copying to system clipboard
 
 ## Requirements
 
