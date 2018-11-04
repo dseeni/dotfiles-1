@@ -24,18 +24,14 @@ Plug 'bling/vim-airline'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 
-" improved jsx/typescript support
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
-
 " show tags of current file in a window
 Plug 'majutsushi/tagbar'
 
+" improved syntax highlighting
+Plug 'sheerun/vim-polyglot'
+
 " LanguageServer client
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
 
 call plug#end()
 
