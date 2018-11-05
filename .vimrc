@@ -198,9 +198,14 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " invoke omni completion with ctrl-l
 inoremap <C-l> <C-x><C-o>
 
-" use jk for selecting omni completion entries
-inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
-inoremap <expr> k pumvisible() ? '<C-p>' : 'k'
+" improve completion menu
+" menuone - show menu even if there's only one entry
+" noselect - don't automatically select an entry
+set completeopt=menuone,noselect
+
+" use ctrl-j, ctrl-k for selecting omni completion entries
+inoremap <expr> <C-j> pumvisible() ? '<C-n>' : ''
+inoremap <expr> <C-k> pumvisible() ? '<C-p>' : ''
 
 " select omni completion entry with enter (always supress newline)
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
