@@ -200,8 +200,12 @@ inoremap <C-l> <C-x><C-o>
 
 " improve completion menu
 " menuone - show menu even if there's only one entry
+" preview - show preview pane if applicable
 " noselect - don't automatically select an entry
-set completeopt=menuone,noselect
+set completeopt=menuone,preview,noselect
+
+" Close preview pane once completion is
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " use ctrl-j, ctrl-k for selecting omni completion entries
 inoremap <expr> <C-j> pumvisible() ? '<C-n>' : ''
