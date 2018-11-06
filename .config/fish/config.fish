@@ -39,7 +39,8 @@ alias ack-src='ack --py --ignore-file=match:test --ignore-file=match:migrat --ig
 
 # Common aliases
 alias l='ls -lha'
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 
 # Git shortcut aliases
 alias gs='git status'

@@ -1,6 +1,6 @@
 # dotfiles
 
-These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript/Rust/C) developer. They mostly concern vim, tmux, [Kitty](https://sw.kovidgoyal.net/kitty) and [fish](https://fishshell.com/).
+These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript/Rust/C) developer. They mostly concern (n)vim, tmux, [Kitty](https://sw.kovidgoyal.net/kitty) and [fish](https://fishshell.com/).
 
 ![my setup](./screenshot.png)
 
@@ -29,7 +29,7 @@ I've tested these dotfiles on both ubuntu and macOS.
 
 ## Requirements
 
-- Ensure you have either vim >= 8.0 or neovim installed
+- Ensure you have either vim >= 8.0 or neovim installed. I personally get much better performance with neovim with these plugins, so that's what I recommend. My fish config aliases `vim` to `nvim`.
 
 These dotfiles are designed to work best with the Kitty terminal emulator, although any other emulator can be used.
 - Download and install the latest kitty binaries here - https://sw.kovidgoyal.net/kitty/binary.html. If you want to use a different terminal emulator, configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config.
