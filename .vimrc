@@ -180,8 +180,13 @@ set laststatus=2
 " don't show -- INSERT --, pointless as we have a status bar
 set noshowmode
 
-" Disable lightline's tabbar
-let g:lightline = {'enable': {'tabline': 0}}
+" Disable lightline's tab bar and show full file path in status bar
+let g:lightline = {
+  \ 'enable': {'tabline': 0},
+  \ 'active': {
+    \ 'left': [[ 'mode', 'paste'], ['readonly', 'relativepath', 'modified']],
+  \ }
+\ }
 
 " ======== TAGS ========
 
