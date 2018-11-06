@@ -236,6 +236,10 @@ let g:LanguageClient_serverCommands = {
 
 " ======== LINTING ========
 
+" disable LanguageClient linting
+let g:LanguageClient_diagnosticsEnable=0
+
+" specify some specific ale linter sources, rest are using defaults
 let g:ale_linters = {'javascript': ['eslint'], 'c': ['clang', 'clangtidy', 'clang-format'], 'typescript': ['eslint']}
 let g:ale_python_flake8_args='--exclude=migrations --ignore=E261 --max-line-length=80'
 
