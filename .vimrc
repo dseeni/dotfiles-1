@@ -173,12 +173,15 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " don't index inside node_modules or dist directories
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
 
-" ======== STATUS BAR ========
+" ======== STATUS/TAB BARS ========
 
 " always show status bar
 set laststatus=2
 " don't show -- INSERT --, pointless as we have a status bar
 set noshowmode
+
+" Disable lightline's tabbar
+let g:lightline = {'enable': {'tabline': 0}}
 
 " ======== TAGS ========
 
