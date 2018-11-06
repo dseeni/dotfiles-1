@@ -15,7 +15,7 @@ I've tested these dotfiles on both ubuntu and macOS.
   - [nerdtree](https://github.com/scrooloose/nerdtree) - tree-style file explorer
   - [vim-nerdtree-tabs](https://github.com/jistr/vim-nerdtree-tabs) - makes nerdtree work better with tab-based workflow
   - [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - show git diff in the gutter, stage/revert hunks
-  - [vim-airline](https://github.com/bling/vim-airline) - powerful and lightweight status/tabline
+  - [lightline.vim](https://github.com/itchyny/lightline.vim) - powerful and lightweight status/tabline
   - [vim-easytags](https://github.com/xolox/vim-easytags) - tag file generation and syntax highlighting of tags
   - [tagbar](https://github.com/majutsushi/tagbar) - show tags of current file in a window
   - [vim-polyglot](https://github.com/sheerun/vim-polyglot) - improved syntax highlighting
