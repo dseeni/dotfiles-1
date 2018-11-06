@@ -50,6 +50,9 @@ hi Normal ctermbg=NONE
 set colorcolumn=80
 highlight ColorColumn ctermbg=232
 
+" stop nvim changing cursor style
+set guicursor=
+
 " ======== EDITING ========
 
 " use 4 spaces to represent tab
