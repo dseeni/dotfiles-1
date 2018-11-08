@@ -23,13 +23,6 @@ Plug 'itchyny/lightline.vim'
 " ALE indicators for lightline
 Plug 'maximbaz/lightline-ale'
 
-" tag file generation and syntax highlighting of tags
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-
-" show tags of current file in a window
-Plug 'majutsushi/tagbar'
-
 " improved syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
@@ -214,17 +207,6 @@ let g:lightline.active = {
 \	   ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok']
 \  ]
 \ }
-
-" ======== TAGS ========
-
-:let g:easytags_async = 1
-:let g:easytags_auto_highlight = 0
-
-" Toggle Tagbar
-nmap <F8> :TagbarToggle<CR>
-
-" open tag under cursor in new tab with ctrl-\
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " ======== COMPLETION ========
 

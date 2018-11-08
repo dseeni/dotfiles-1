@@ -17,8 +17,6 @@ I've tested these dotfiles on both ubuntu and macOS.
   - [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - show git diff in the gutter, stage/revert hunks
   - [lightline.vim](https://github.com/itchyny/lightline.vim) - powerful and lightweight status/tabline
   - [maximbaz/lightline-ale](https://github.com/maximbaz/lightline-ale) - ALE indicators for lightline
-  - [vim-easytags](https://github.com/xolox/vim-easytags) - tag file generation and syntax highlighting of tags
-  - [tagbar](https://github.com/majutsushi/tagbar) - show tags of current file in a window
   - [vim-polyglot](https://github.com/sheerun/vim-polyglot) - improved syntax highlighting
   - [coc.nvim](https://github.com/neoclide/coc.nvim) - LanguageServer client for intelligent autocomplete
 - vim colorschemes:
@@ -61,15 +59,6 @@ sudo pip install flake8 python-language-server
 - Ensure you have the python3 neovim interface installed, if you want to use neovim
 ```
 pip3 install neovim
-```
-
-- Ensure you have exuberant-ctags installed (for vim tags and tagbar)
-```
-linux:
-sudo apt-get install exuberant-ctags
-
-mac:
-brew install ctags
 ```
 
 - Ensure you have JS/TS language server and eslint requirements installed
