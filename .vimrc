@@ -33,8 +33,7 @@ Plug 'majutsushi/tagbar'
 " improved syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
-" LanguageServer client
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
 
@@ -229,14 +228,16 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " ======== COMPLETION ========
 
-" invoke omni completion with ctrl-l
-inoremap <C-l> <C-x><C-o>
-
-" improve completion menu
-" menuone - show menu even if there's only one entry
-" preview - show preview pane if applicable
-" noselect - don't automatically select an entry
-set completeopt=menuone,preview,noselect
+" Use tab to trigger completion and tab/shift-tab to navigate results
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " Close preview pane once completion is
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -248,30 +249,7 @@ inoremap <expr> <C-k> pumvisible() ? '<C-p>' : ''
 " select omni completion entry with enter (always supress newline)
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
-" F5 to bring up language client context menu
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-" K to bring up documentation for thing under cursor
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-" gd to go to definition of thing under cursor
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-" F2 for language server rename
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-" required for operations modifying multiple buffers like rename.
-set hidden
-
-" define what binaries to use for each LanguageServer
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'typescript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'python': ['/usr/local/bin/pyls'],
-    \ }
-
 " ======== LINTING ========
-
-" disable LanguageClient linting
-let g:LanguageClient_diagnosticsEnable=0
 
 " specify some specific ale linter sources, rest are using defaults
 let g:ale_linters = {'javascript': ['eslint'], 'c': ['clang', 'clangtidy', 'clang-format'], 'typescript': ['eslint']}
