@@ -152,6 +152,11 @@ map! <Esc>[1;5C <C-Right>
 " always write to existing file - prevents webpack watch flakiness
 :set backupcopy=yes
 
+" ======== GIT GUTTER ========
+
+" default is 4 seconds - reduce to 100ms
+set updatetime=100
+
 " ======== NERDTREE ========
 
 " set toggle to C-n
