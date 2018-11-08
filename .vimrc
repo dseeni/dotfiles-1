@@ -179,7 +179,7 @@ set noshowmode
 let g:lightline = {}
 
 " Disable lightline's tab bar
-let g:lightline.enbable = {'tabline': 0}
+let g:lightline.enable = {'tabline': 0}
 
 " Add lightline-ale components to lightline
 let g:lightline.component_expand = {
