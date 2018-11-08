@@ -20,6 +20,9 @@ Plug 'airblade/vim-gitgutter'
 " powerful and lightweight status/tabline
 Plug 'itchyny/lightline.vim'
 
+" ALE indicators for lightline
+Plug 'maximbaz/lightline-ale'
+
 " tag file generation and syntax highlighting of tags
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
@@ -180,12 +183,37 @@ set laststatus=2
 " don't show -- INSERT --, pointless as we have a status bar
 set noshowmode
 
-" Disable lightline's tab bar and show full file path in status bar
-let g:lightline = {
-  \ 'enable': {'tabline': 0},
-  \ 'active': {
-    \ 'left': [[ 'mode', 'paste'], ['readonly', 'relativepath', 'modified']],
-  \ }
+" Initialize lightline config
+let g:lightline = {}
+
+" Disable lightline's tab bar
+let g:lightline.enbable = {'tabline': 0}
+
+" Add lightline-ale components to lightline
+let g:lightline.component_expand = {
+\  'linter_checking': 'lightline#ale#checking',
+\  'linter_warnings': 'lightline#ale#warnings',
+\  'linter_errors': 'lightline#ale#errors',
+\  'linter_ok': 'lightline#ale#ok'
+\ }
+
+" Set colours for the components
+let g:lightline.component_type = {
+\  'linter_checking': 'left',
+\  'linter_warnings': 'warning',
+\  'linter_errors': 'error',
+\  'linter_ok': 'left'
+\ }
+
+" Configure lightline's statusbar
+let g:lightline.active = {
+\  'left': [[ 'mode', 'paste'], ['readonly', 'relativepath', 'modified']],
+\  'right': [
+\    ['lineinfo'],
+\    ['percent'],
+\    ['fileformat', 'fileencoding', 'filetype'],
+\	   ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok']
+\  ]
 \ }
 
 " ======== TAGS ========
