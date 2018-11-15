@@ -28,7 +28,16 @@ I've tested these dotfiles on both ubuntu and macOS.
 
 ## Requirements
 
-- Ensure you have either neovim or vim >= 8.0. Some plugins such as coc.nvim will need some extra fiddling to get working with regular Vim, though it should be possible. I personally also get much better performance with neovim these days, so that's what I recommend. My fish config aliases `vim` to `nvim`.
+- Ensure you have either neovim >= 0.3.0 or vim >= 8.0. Some plugins such as coc.nvim will need some extra fiddling to get working with regular Vim, though it should be possible. I personally also get much better performance with neovim these days, so that's what I recommend. My fish config aliases `vim` to `nvim`.
+```
+linux:
+sudo apt-add-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+
+mac:
+brew install neovim
+```
 
 These dotfiles are designed to work best with the Kitty terminal emulator, although any other emulator can be used.
 - Download and install the latest kitty binaries here - https://sw.kovidgoyal.net/kitty/binary.html. If you want to use a different terminal emulator, configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config.
@@ -56,14 +65,14 @@ On linux, weird things happen if you set fish as the default shell, so instead [
 sudo pip install flake8 python-language-server
 ```
 
-- Ensure you have the python3 neovim interface installed, if you want to use neovim
+- Ensure you have the python3 neovim interface installed
 ```
 pip3 install neovim
 ```
 
-- Ensure you have JS/TS language server and eslint requirements installed
+- Ensure you have yarn (for coc.nvim) and eslint (for ALE) installed
 ```
-sudo npm install -g eslint eslint-config-tomjwatson javascript-typescript-stdio typescript-language-server typescript
+sudo npm install -g yarn eslint eslint-config-tomjwatson
 ```
 
 ## Installation
@@ -82,6 +91,21 @@ cd dotfiles
 - To install the vim plugins, open vim and run
 ```
 :PlugInstall
+```
+
+- Install common coc.nvim plugins. NOTE - on linux these seem to need to be run with sudo
+```
+# Javascript / Typescript
+:CocInstall coc-eslint coc-tslint coc-tsserver
+
+# Web Development
+:CocInstall coc-json coc-html coc-stylelint
+
+# Rust
+:CocInstall coc-rls
+
+# Python
+:CocInstall coc-pyls
 ```
 
 ## Updating
