@@ -138,16 +138,6 @@ nnoremap <C-left> :tabprevious<CR>
 " and whilst in insert mode
 inoremap <C-right> <Esc>:tabnext<CR>
 inoremap <C-left> <Esc>:tabprevious<CR>
-" and whilst inside screen / tmux
-map <Esc>[C <C-Right>
-map <Esc>[D <C-Left>
-map <Esc>[1;5D <C-Left>
-map <Esc>[1;5C <C-Right>
-" and whilst inside screen / tmux and insert mode
-map! <Esc>[C <C-Right>
-map! <Esc>[D <C-Left>
-map! <Esc>[1;5D <C-Left>
-map! <Esc>[1;5C <C-Right>
 
 " always write to existing file - prevents webpack watch flakiness
 :set backupcopy=yes
