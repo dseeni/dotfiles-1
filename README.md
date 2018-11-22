@@ -1,6 +1,6 @@
 # dotfiles
 
-These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript/Rust/C) developer. They mostly concern (n)vim, tmux, [Kitty](https://sw.kovidgoyal.net/kitty) and [fish](https://fishshell.com/).
+These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript/Rust/C) developer. They mostly concern (n)vim, tmux and [fish](https://fishshell.com/).
 
 ![my setup](./screenshot.png)
 
@@ -8,7 +8,7 @@ I've tested these dotfiles on both ubuntu and macOS.
 
 ## Contents
 
-- custom config for vim/nvim, ack-grep, fish, eslint, tmux and kitty
+- custom config for vim/nvim, ack-grep, fish, eslint, tmux
 - vim plugins:
   - [ale](https://github.com/w0rp/ale) - asynchronous code linting
   - [ctrlp.vim](https://github.com/kien/ctrlp.vim) - fuzzy file, buffer, mru, tag, etc finder
@@ -39,8 +39,7 @@ mac:
 brew install neovim
 ```
 
-These dotfiles are designed to work best with the Kitty terminal emulator, although any other emulator can be used.
-- Download and install the latest kitty binaries here - https://sw.kovidgoyal.net/kitty/binary.html. If you want to use a different terminal emulator, configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config.
+- Configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config. Adding some padding inside the terminal is also recommended, if possible.
 
 - Ensure you have fish installed
 ```
