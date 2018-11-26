@@ -9,7 +9,7 @@ function install() {
     rsync --exclude ".git/" --exclude ".gitmodules" --exclude ".DS_Store" \
           --exclude "install.sh" --exclude "README.md" --exclude "UNLICENSE" \
           --exclude ".gitignore" --exclude "update.sh" --exclude "docs/" \
-          -av --no-perms . ~;
+          --exclude "screenshot.png" -av --no-perms . ~;
     echo "done"
 }
 
