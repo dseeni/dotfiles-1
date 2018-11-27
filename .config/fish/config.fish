@@ -23,6 +23,11 @@ end
 if test -d ~/dev/flutter/bin
   set -gx PATH ~/dev/flutter/bin $PATH
 end
+#
+# Set up gcloud
+if test -d ~/dev/google-cloud-sdk
+  set -gx PATH ~/dev/google-cloud-sdk/bin $PATH
+end
 
 # Set up Postgres
 if test -d /Library/PostgreSQL/10/bin/
@@ -55,7 +60,7 @@ alias ag='ag --hidden'
 
 # Soure awsrc if it exists
 if test -f ~/.awsrc
-    . ~/.awsrc;
+    . ~/.awsrc
 end
 
 . ~/.config/fish/z.fish
