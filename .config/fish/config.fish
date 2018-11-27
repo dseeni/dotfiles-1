@@ -14,9 +14,9 @@ function alt
 end
 
 # Set up Android Studio
-if test -e ~/.foobar
-  export ANDROID_HOME=$HOME/Library/Android/sdk
-  set -gx PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $PATH
+if test -d ~/dev/android-sdk
+  export ANDROID_HOME=~/dev/android-sdk
+  set -gx PATH ~/dev/android-sdk/tools ~/dev/android-sdk/platform-tools $PATH
 end
 
 # Set up flutter
