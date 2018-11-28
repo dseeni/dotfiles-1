@@ -9,3 +9,5 @@ xmodmap -e "keycode 133 = Alt_L Meta_L Alt_L Meta_L"  #this will make Super_L to
 xmodmap -pke > ~/.xmodmap
 echo "xmodmap .xmodmap" >> ~/.xinitrc
 ```
+
+Note - possibly useful guide for KDE laptop
