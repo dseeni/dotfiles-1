@@ -152,6 +152,10 @@ set updatetime=100
 " set toggle to C-n
 map <C-n> :NERDTreeTabsToggle<CR>
 
+" ignore certain files/folders
+set wildignore+=*.pyc,node_modules,dist
+let NERDTreeRespectWildIgnore=1
+
 " ======== CTRLP ========
 
 " only search for things under the directory that you opened vim from
