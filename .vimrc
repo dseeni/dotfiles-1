@@ -20,6 +20,10 @@ Plug 'airblade/vim-gitgutter'
 " powerful and lightweight status/tabline
 Plug 'itchyny/lightline.vim'
 
+" turn lightline into a bufferline
+Plug 'bling/vim-bufferline'
+Plug 'mgee/lightline-bufferline'
+
 " ALE indicators for lightline
 Plug 'maximbaz/lightline-ale'
 
@@ -167,8 +171,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " don't index inside node_modules or dist directories
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
 
-" ======== STATUS/TAB BARS ========
+" ======== STATUS/TAB/BUFFER BARS ========
 
+" always show tabline, regardless of if there's only one tab
+set showtabline=2
 " always show status bar
 set laststatus=2
 " don't show -- INSERT --, pointless as we have a status bar
@@ -177,15 +183,14 @@ set noshowmode
 " Initialize lightline config
 let g:lightline = {}
 
-" Disable lightline's tab bar
-let g:lightline.enable = {'tabline': 0}
-
-" Add lightline-ale components to lightline
+" Add components to lightline
 let g:lightline.component_expand = {
 \  'linter_checking': 'lightline#ale#checking',
 \  'linter_warnings': 'lightline#ale#warnings',
 \  'linter_errors': 'lightline#ale#errors',
-\  'linter_ok': 'lightline#ale#ok'
+\  'linter_ok': 'lightline#ale#ok',
+\  'buffers': 'lightline#bufferline#buffers',
+\  'statuslinetabs': 'LightlineStatuslineTabs',
 \ }
 
 " Set colours for the components
@@ -193,19 +198,42 @@ let g:lightline.component_type = {
 \  'linter_checking': 'left',
 \  'linter_warnings': 'warning',
 \  'linter_errors': 'error',
-\  'linter_ok': 'left'
+\  'linter_ok': 'left',
+\  'bufferline': 'tabsel',
+\  'buffers': 'tabsel',
 \ }
 
 " Configure lightline's statusbar
 let g:lightline.active = {
-\  'left': [[ 'mode', 'paste'], ['readonly', 'relativepath', 'modified']],
-\  'right': [
-\    ['lineinfo'],
-\    ['percent'],
-\    ['fileformat', 'fileencoding', 'filetype'],
-\	   ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok']
-\  ]
+\   'left': [
+\     ['mode', 'paste'],
+\     ['readonly', 'relativepath', 'modified'],
+\     ['statuslinetabs']
+\   ],
+\   'right': [
+\     ['lineinfo'],
+\     ['percent'],
+\     ['fileformat', 'fileencoding', 'filetype'],
+\	    ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok']
+\   ],
 \ }
+
+function! LightlineStatuslineTabs() abort
+  return join(map(range(1, tabpagenr('$')),
+        \ '(v:val == tabpagenr() ? "[*] " : "") . lightline#tab#filename(v:val)'), " \u2b81 ")
+endfunction
+
+let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
+
+" Configure lightline's tabline to show buffers
+" let g:lightline.tabline = {
+" \   'left': [ ['bufferline'] ]
+" \ }
+
+function! LightlineBufferline()
+  call bufferline#refresh_status()
+  return [ g:bufferline_status_info.before, g:bufferline_status_info.current, g:bufferline_status_info.after]
+endfunction
 
 " ======== COMPLETION ========
 
