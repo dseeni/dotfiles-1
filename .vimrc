@@ -167,6 +167,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " don't index inside node_modules or dist directories
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|dist)$'
 
+" C-b to search open buffers
+nmap <C-b> :CtrlPBuffer<CR>
+
 " ======== STATUS/TAB BARS ========
 
 " always show status bar
