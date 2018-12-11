@@ -56,9 +56,7 @@ alias gld='git log --decorate'
 alias gf='git fetch origin'
 
 # Set locale explicitly. Mosh won't work without this
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+set -x LC_ALL en_GB.UTF-8
 
 # Make ag look in hidden files by default
 alias ag='ag --hidden'
