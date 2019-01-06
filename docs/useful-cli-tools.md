@@ -1,3 +1,6 @@
+Useful CLI tools
+================
+
 ## rg
 
 Super fast grep

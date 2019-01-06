@@ -11,3 +11,7 @@ echo "xmodmap .xmodmap" >> ~/.xinitrc
 ```
 
 Note - possibly useful guide for KDE laptop
+
+### Install google-drive-ocamlfuse
+
+https://github.com/astrada/google-drive-ocamlfuse
