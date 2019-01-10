@@ -31,9 +31,7 @@ I've tested these dotfiles on both ubuntu and macOS.
 - Ensure you have either neovim >= 0.3.0 or vim >= 8.0. Some plugins such as coc.nvim will need some extra fiddling to get working with regular Vim, though it should be possible. I personally also get much better performance with neovim these days, so that's what I recommend. My fish config aliases `vim` to `nvim`.
 ```
 linux:
-sudo apt-add-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
+sudo apt install neovim
 
 mac:
 brew install neovim
@@ -44,7 +42,7 @@ brew install neovim
 - Ensure you have fish installed
 ```
 linux:
-sudo apt-get install fish
+sudo apt install fish
 
 mac:
 brew install fish
