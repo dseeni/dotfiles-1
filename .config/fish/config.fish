@@ -19,6 +19,11 @@ if test -d ~/dev/android-sdk
   set -gx PATH ~/dev/android-sdk/tools ~/dev/android-sdk/platform-tools $PATH
 end
 
+# Set up userland global npm bin
+if test -d ~/.npm-global
+  set -gx PATH ~/.npm-global/bin $PATH
+end
+
 # Set up flutter
 if test -d ~/dev/flutter/bin
   set -gx PATH ~/dev/flutter/bin $PATH
