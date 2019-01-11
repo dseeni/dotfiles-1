@@ -16,7 +16,8 @@ function update() {
     rsync --exclude ".git/" --exclude ".gitmodules" --exclude ".DS_Store" \
           --exclude "install.sh" --exclude "README.md" --exclude "UNLICENSE" \
           --exclude ".gitignore" --exclude "update.sh" --exclude "docs/" \
-          --exclude "screenshot.png" --exclude init-linux.sh -av --no-perms . ~;
+          --exclude "screenshot.png" --exclude "init-linux.sh" \
+          -av --no-perms . ~;
     echo "done"
 }
 
