@@ -64,7 +64,7 @@ set guicursor=
 :set backspace=indent,eol,start
 
 " use system clipboard as default clipboard
-:set clipboard=unnamed
+:set clipboard=unnamedplus
 
 " number of lines to keep above and below the cursor
 :set scrolloff=5
