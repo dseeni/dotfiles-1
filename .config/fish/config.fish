@@ -51,6 +51,7 @@ alias ack-src='ack --py --ignore-file=match:test --ignore-file=match:migrat --ig
 alias l='ls -lha'
 alias vi='nvim'
 alias vim='nvim'
+alias open='xdg-open'
 
 # Git shortcut aliases
 alias gs='git status'
