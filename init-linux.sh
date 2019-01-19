@@ -6,7 +6,7 @@ set -x
 sudo apt update
 
 echo Install necessary programs from apt repositories
-sudo apt install git tmux fish neovim python-pip python3-pip npm ripgrep tldr htop tree
+sudo apt install git tmux fish neovim python-pip python3-pip npm ripgrep tldr htop tree clang
 
 echo Switching shell to fish
 chsh -s $(which fish)

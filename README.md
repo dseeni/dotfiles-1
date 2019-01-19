@@ -57,6 +57,11 @@ You will need to logout and log back in for this to take effect.
 
 On linux, weird things happen if you set fish as the default shell, so instead [we have set fish][./.tmux-linux.conf] as the default command for tmux. You can also set fish as the defalt command to run in your terminal emulator, for if you are not using tmux.
 
+- Ensure you have clang installed, for C linting
+```
+sudo apt install clang
+```
+
 - Ensure you have flake8 (for ale python linting) and python-language-server (autocompletion) installed
 ```
 sudo pip install flake8 python-language-server
