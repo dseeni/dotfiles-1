@@ -49,26 +49,9 @@ The configuration file lives in /etc/default/tlp. It works well out of the box a
 
 I would suggest setting USB_AUTOSUSPEND to 0 because if you are using hardware such as external sound cards, that would turn them off. If you want the features, you will have to enable the threshold charging manually from the configuration.
 
-
-### Install the Lenovo-throttling-fix script.
-
-You can find it here: https://github.com/erpalma/lenovo-throttling-fix
-
-```
-sudo apt install python3-venv build-essential python3-dev libdbus-glib-1-dev libgirepository1.0-dev libcairo2-dev
-git clone git@github.com:erpalma/lenovo-throttling-fix.git
-sudo ./lenovo-throttling-fix/install.sh
-```
-
-You should also stop thermalmd, which is an ubuntu service that will clash with the throttling fix script.
-
-```
-sudo systemctl stop thermald.service
-sudo systemctl disable thermald.service
-sudo systemctl mask thermald.service
-```
-
 ### Undervolt
+
+Undervolting the machine will dramatically improve the thermal situation. Setting the temp limit to 85 via undervolt and disabling thermald also drastically reduces throttling.
 
 ```
 sudo apt install python-pip
@@ -78,7 +61,7 @@ sudo pip install --system undervolt
 Recommended:
 
 ```
-sudo undervolt --core -150 --cache -150 --gpu -40 --uncore -40
+sudo undervolt --core -150 --cache -150 --gpu -40 --uncore -40 --temp 85 --temp-bat 75
 ```
 
 Check current:
@@ -88,3 +71,11 @@ sudo undervolt --read
 
 Start on boot:
 https://github.com/georgewhewell/undervolt#running-automatically-on-boot
+
+You should also stop thermalmd, which is an ubuntu service that will clash with the throttling fix script.
+
+```
+sudo systemctl stop thermald.service
+sudo systemctl disable thermald.service
+sudo systemctl mask thermald.service
+```

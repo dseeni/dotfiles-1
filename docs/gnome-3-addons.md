@@ -11,10 +11,22 @@ Then install [disable-workspace-switch-animation](https://extensions.gnome.org/e
 
 Finally, to disable the workspace switcher overlay, install [disable-workspace-switcher-popup](https://extensions.gnome.org/extension/959/disable-workspace-switcher-popup/).
 
+## Install GSConnect
+
+Add awesome android integration - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/).
+
+## Add Suspend button
+
+Add suspend button to system tray, next to shudown button - [suspend-button](https://extensions.gnome.org/extension/826/suspend-button/)
+
+## Hide Activities button
+
+Useless noise - [hide-activities-button](https://extensions.gnome.org/extension/744/hide-activities-button/).
+
 ## Dock
 
-Simply install [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock/).
+Ubuntu mainline has a nice dock by default. If using another flavour of gnome 3, simply install [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock/).
 
 ## Legacy System Tray Icons
 
-Need [topicons](https://extensions.gnome.org/extension/1031/topicons/) to show legacy tray icons.
+Ubuntu has a nice legacy tray by default. Otherwise, install [topicons](https://extensions.gnome.org/extension/1031/topicons/) to add a legacy tray.
