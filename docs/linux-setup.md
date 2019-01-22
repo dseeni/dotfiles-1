@@ -9,6 +9,16 @@ See [gnome-3-addons](./gnome-3-addons.md).
 
 https://github.com/astrada/google-drive-ocamlfuse
 
+Don't add the entry to fstab - that caused boots to hang.
+
+Simply add the following to the end of `~/.profile` to start the service 30
+seconds after login:
+
+```
+# After 30 seconds, mount google drive
+(sleep 30 && /usr/bin/google-drive-ocamlfuse "/home/tomw/google-drive") &
+```
+
 ## Install [Ulauncher](https://github.com/Ulauncher/Ulauncher/releases/latest)
 
 Popup launcher.
