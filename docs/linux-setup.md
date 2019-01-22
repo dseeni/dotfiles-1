@@ -19,6 +19,10 @@ sudo apt update
 sudo apt install ulauncher
 ```
 
+Install Gnome Settings addon - https://github.com/friday/ulauncher-gnome-settings
+
+Add `maps` shortcut with query string of `https://www.google.com/maps?hl=en&q=%s`.
+
 ## Install [Timeshift](https://github.com/teejee2008/timeshift)
 
 GUI for automated backups to an external HDD.
