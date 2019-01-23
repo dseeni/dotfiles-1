@@ -46,3 +46,7 @@ sudo apt install timeshift
 ## Install Slack
 
 The .deb includes a repository, so simply download and install the .deb from https://slack.com/intl/es-es/downloads/linux.
+
+## Fix Firefox acceleration
+
+I had to go to `about:config` and set `layers.acceleration.force-enabled` to `true` to fix scrolling smoothness.
