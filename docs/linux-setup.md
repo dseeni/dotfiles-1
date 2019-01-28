@@ -47,6 +47,18 @@ sudo apt install timeshift
 
 The .deb includes a repository, so simply download and install the .deb from https://slack.com/intl/es-es/downloads/linux.
 
+## Install Signal Desktop
+
+Check latest install instructions here - https://www.signal.org/download/
+
+As of time of writing:
+
+```
+curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+sudo apt update && sudo apt install signal-desktop
+```
+
 ## Fix Firefox acceleration
 
 I had to go to `about:config` and set `layers.acceleration.force-enabled` to `true` to fix scrolling smoothness.
