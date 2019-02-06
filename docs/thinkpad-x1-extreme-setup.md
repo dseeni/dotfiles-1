@@ -17,16 +17,6 @@ Now that you have successfully installed, you can set the graphics back to hybri
 
 Note - external displays can only connected when running the nvidia card (WHYYYY?!).
 
-## Set nomodeset
-
-Edit `/etc/default/grub` and update the following line to:
-
-```
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"
-```
-
-This fixes the laptop failing to boot from suspend when running the nvidia card.
-
 ## Thermal Management
 
 [Source](https://old.reddit.com/r/thinkpad/comments/9xye6l/thinkpad_x1_extreme_running_kubuntu_ubuntu_1804/)
