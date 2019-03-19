@@ -47,6 +47,9 @@ end
 # Alias for acking python src files more cleanly
 alias ack-src='ack --py --ignore-file=match:test --ignore-file=match:migrat --ignore-dir=_scripts'
 
+# Alias for converting spreadsheets to csvs
+alias csvify='libreoffice --headless --convert-to csv --outdir . *.xlsx'
+
 # Common aliases
 alias l='ls -lha'
 alias vi='nvim'
