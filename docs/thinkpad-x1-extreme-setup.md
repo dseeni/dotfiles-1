@@ -69,3 +69,12 @@ sudo systemctl stop thermald.service
 sudo systemctl disable thermald.service
 sudo systemctl mask thermald.service
 ```
+
+## Fixing wake from suspend
+
+I had lots of problems waking from suspend at first, which recently seems to have fixed itself. I had the following GRUB settings set preding that, but just in case this starts happening again, here is what I had set:
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset rcutree.rcu_idle_gp_delay=1"
+GRUB_CMDLINE_LINUX="nouveau.modeset=0"
+```
