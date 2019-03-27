@@ -39,9 +39,6 @@ call plug#end()
 " set colorscheme to fansi
 colorscheme fansi
 
-" fix background color behaviour
-hi Normal ctermbg=NONE
-
 " render a column at 80 characters
 set colorcolumn=80
 
@@ -143,6 +140,9 @@ inoremap <C-left> <Esc>:tabprevious<CR>
 :set backupcopy=yes
 
 " ======== GIT GUTTER ========
+
+" allow us to override the color
+let g:gitgutter_override_sign_column_highlight = 0
 
 " default is 4 seconds - reduce to 100ms
 set updatetime=100
