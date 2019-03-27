@@ -44,7 +44,6 @@ hi Normal ctermbg=NONE
 
 " render a column at 80 characters
 set colorcolumn=80
-highlight ColorColumn ctermbg=232
 
 " stop nvim changing cursor style
 set guicursor=
