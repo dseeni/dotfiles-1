@@ -39,6 +39,10 @@ brew install neovim
 
 - Configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config. Adding some padding inside the terminal is also recommended, if possible.
 
+- Configure terminal colors to:
+
+![terminal colour palette](./colors.png)
+
 - Ensure you have fish installed
 ```
 linux:
