@@ -26,6 +26,7 @@ Plug 'maximbaz/lightline-ale'
 " improved syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
+" LSP client
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
@@ -35,8 +36,8 @@ call plug#end()
 " use 256 colors
 :set t_Co=256
 
-" set colorscheme to termschool
-colorscheme termschool
+" set colorscheme to fansi
+colorscheme fansi
 
 " fix background color behaviour
 hi Normal ctermbg=NONE

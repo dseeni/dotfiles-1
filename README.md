@@ -20,6 +20,7 @@ I've tested these dotfiles on both ubuntu and macOS.
   - [vim-polyglot](https://github.com/sheerun/vim-polyglot) - improved syntax highlighting
   - [coc.nvim](https://github.com/neoclide/coc.nvim) - LanguageServer client for intelligent autocomplete
 - vim colorschemes:
+  - *fansi* - my custom ANSI color scheme
   - [termschool-vim-theme](https://github.com/marcopaganini/termschool-vim-theme)
 - TMUX plugins
   - [tpm](https://github.com/tmux-plugins/tpm) - tmux plugin manager
