@@ -59,6 +59,12 @@ echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sud
 sudo apt update && sudo apt install signal-desktop
 ```
 
-## Fix Firefox acceleration
+## Firefox improvements
 
-I had to go to `about:config` and set `layers.acceleration.force-enabled` to `true` to fix scrolling smoothness.
+Make Firefox do proper smooth scrolling with trackpads:
+
+```
+MOZ_USE_XINPUT2=1 | sudo tee /etc/profile.d/use-xinput2.sh
+```
+
+I also had to go to `about:config` and set `layers.acceleration.force-enabled` to `true` to improve scrolling smoothness.
