@@ -8,12 +8,9 @@ exec "source " . expand('<sfile>:p:h') . "/default-light.vim"
 
 let colors_name = "fansi"
 
-" Have no background for dark mode and a light background for light mode
-if &background == "light"
-  hi Normal       ctermfg=8    ctermbg=15
-else
-  hi Normal                    ctermbg=NONE
-endif
+" Pass-through background and font color - your terminal profile should
+" determine light/dark mode colors for background and font.
+hi Normal                    ctermbg=NONE
 
 " In diffs, added lines are green, changed lines are yellow, deleted lines are
 " red, and changed text (within a changed line) is bright yellow and bold.
