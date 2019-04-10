@@ -33,31 +33,42 @@ hi Search         ctermfg=0    ctermbg=11
 " Dim line numbers, comments, color columns, the status line, splits and sign
 " columns.
 hi LineNr         ctermfg=8
-hi TabLineFill    ctermfg=NONE   ctermbg=NONE cterm=NONE
-hi TabLineSel     ctermfg=15     ctermbg=4    cterm=bold
-hi TabLine        ctermfg=NONE   ctermbg=NONE cterm=NONE
+hi TabLine        ctermfg=NONE ctermbg=NONE cterm=NONE
+hi TabLineSel     ctermfg=15   ctermbg=4    cterm=bold
+hi TabLineFill    ctermfg=NONE ctermbg=NONE cterm=NONE
+
+" Blue background for wildmenu selected option
+hi WildMenu       ctermfg=15   ctermbg=4
+
+" Grey colours for p-menu (autocomplete popover)
+hi Pmenu          ctermfg=15   ctermbg=240
+hi PmenuSel       ctermfg=15   ctermbg=4
+hi PmenuSbar      ctermfg=0    ctermbg=240
+hi PmenuThumb                  ctermbg=245
+
+" Blue background for cursor line, for example ctrl-p selected entry
+hi CursorLine     ctermfg=15   ctermbg=4 cterm=NONE
+
+" Yellow line number on selected line
+hi CursorLineNr   ctermfg=3
 
 if &background == "light"
   hi ColorColumn  ctermfg=15   ctermbg=7
   hi Folded       ctermfg=8    ctermbg=7
   hi FoldColumn   ctermfg=8    ctermbg=7
-  hi Pmenu        ctermfg=0    ctermbg=7
-  hi PmenuSel     ctermfg=8    ctermbg=0
   hi SpellCap     ctermfg=8    ctermbg=7
   hi StatusLine   ctermfg=0    ctermbg=7    cterm=bold
   hi StatusLineNC ctermfg=8    ctermbg=7    cterm=NONE
   hi VertSplit    ctermfg=8    ctermbg=7    cterm=NONE
   hi SignColumn   ctermfg=8    ctermbg=NONE
 else
-  hi ColorColumn  ctermfg=7    ctermbg=0
+  hi ColorColumn  ctermfg=7    ctermbg=234
   hi Folded       ctermfg=7    ctermbg=8
   hi FoldColumn   ctermfg=7    ctermbg=8
-  hi Pmenu        ctermfg=15   ctermbg=8
-  hi PmenuSel     ctermfg=8    ctermbg=15
   hi SpellCap     ctermfg=7    ctermbg=8
-  hi StatusLine   ctermfg=15   ctermbg=8    cterm=bold
-  hi StatusLineNC ctermfg=7    ctermbg=8    cterm=NONE
-  hi VertSplit    ctermfg=7    ctermbg=8    cterm=NONE
+  hi StatusLine   ctermfg=7    ctermbg=234  cterm=NONE
+  hi StatusLineNC ctermfg=7    ctermbg=235  cterm=NONE
+  hi VertSplit    ctermfg=235  ctermbg=235  cterm=NONE
   hi SignColumn   ctermfg=15   ctermbg=NONE
 endif
 
@@ -74,6 +85,7 @@ hi Keyword      ctermfg=3      ctermbg=NONE cterm=NONE
 hi NonText      ctermfg=15     ctermbg=NONE cterm=NONE
 hi Number       ctermfg=12     ctermbg=NONE cterm=NONE
 hi Operator     ctermfg=2      ctermbg=NONE cterm=NONE
+hi PreProc      ctermfg=5      ctermbg=NONE cterm=NONE
 hi Statement    ctermfg=3      ctermbg=NONE cterm=NONE
 hi StorageClass ctermfg=5      ctermbg=NONE cterm=NONE
 hi Type         ctermfg=3      ctermbg=NONE cterm=NONE

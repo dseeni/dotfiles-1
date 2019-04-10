@@ -33,17 +33,14 @@ call plug#end()
 
 " ======== VISUAL ========
 
+" render a column at 80 characters
+set colorcolumn=80
+
 " use 256 colors
 :set t_Co=256
 
 " set colorscheme to fansi
 colorscheme fansi
-
-" render a column at 80 characters
-set colorcolumn=80
-
-" stop nvim changing cursor style
-set guicursor=
 
 " ======== EDITING ========
 
@@ -201,11 +198,10 @@ let g:lightline.component_type = {
 
 " Configure lightline's statusbar
 let g:lightline.active = {
-\  'left': [[ 'mode', 'paste'], ['readonly', 'relativepath', 'modified']],
+\  'left': [[ 'mode', 'paste'], ['readonly', 'filename', 'modified']],
 \  'right': [
 \    ['lineinfo'],
 \    ['percent'],
-\    ['fileformat', 'fileencoding', 'filetype'],
 \	   ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok']
 \  ]
 \ }
