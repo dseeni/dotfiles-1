@@ -2,7 +2,7 @@
 
 These dotfiles contain all of the necessary packages, plugins and config I need to be a productive (Python/Javascript/Rust/C) developer. They mostly concern (n)vim, tmux and [fish](https://fishshell.com/).
 
-![my setup](./screenshot.png)
+![my setup](https://raw.githubusercontent.com/tom-james-watson/dotfiles/master/screenshot.png)
 
 I've tested these dotfiles on both ubuntu and macOS.
 
