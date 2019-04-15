@@ -52,6 +52,9 @@ hi CursorLine     ctermfg=15   ctermbg=4 cterm=NONE
 " Yellow line number on selected line
 hi CursorLineNr   ctermfg=3
 
+" Underline matching parentheses
+hi MatchParen     ctermfg=NONE ctermbg=NONE cterm=underline
+
 if &background == "light"
   hi ColorColumn  ctermfg=15   ctermbg=7
   hi Folded       ctermfg=8    ctermbg=7

@@ -10,7 +10,6 @@ highlight Title          ctermfg=5
 highlight WarningMsg     ctermfg=1
 highlight Conceal        ctermfg=7 ctermbg=7
 highlight CursorColumn   ctermbg=7
-highlight MatchParen     ctermbg=14
 highlight Special        ctermfg=5
 highlight Underlined     cterm=underline ctermfg=5
 highlight Ignore         ctermfg=15
