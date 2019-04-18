@@ -17,11 +17,8 @@ sudo pip install flake8 python-language-server s-tui
 echo Install python3 dependencies
 sudo pip3 install neovim
 
-echo Setting global npm dir to ~/.npm-global
-npm config set prefix '~/.npm-global'
-
 echo Install node dependencies
-npm install -g n yarn eslint eslint-config-tomjwatson n
+sudo npm install -g n yarn eslint eslint-config-tomjwatson
 
 echo Install the LTS version of node
 sudo n lts
