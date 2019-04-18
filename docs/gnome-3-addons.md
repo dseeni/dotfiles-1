@@ -3,13 +3,28 @@ Gnome 3 Setup
 
 ## Workspace Grid
 
-Install [workspace-grid](https://extensions.gnome.org/extension/484/workspace-grid/).
+Install [workspace-matrix](https://extensions.gnome.org/extension/1485/workspace-matrix/).
 
-To remove workspaces from overview, set both maximum width options in plugin settings to 0 to hide workspaces from overview and also install [hide-workspace-thumbnails](https://extensions.gnome.org/extension/808/hide-workspace-thumbnails/). Combination of both seems necessary.
+To remove workspaces from overview install [hide-workspace-thumbnails](https://extensions.gnome.org/extension/808/hide-workspace-thumbnails/).
 
-Then install [disable-workspace-switch-animation](https://extensions.gnome.org/extension/1328/disable-workspace-switch-animation) to make workspace switching instant.
+Optionally, to disable the workspace switcher overlay, install [disable-workspace-switcher-popup](https://extensions.gnome.org/extension/959/disable-workspace-switcher-popup/).
 
-Finally, to disable the workspace switcher overlay, install [disable-workspace-switcher-popup](https://extensions.gnome.org/extension/959/disable-workspace-switcher-popup/).
+Optionally, install [disable-workspace-switch-animation](https://extensions.gnome.org/extension/1328/disable-workspace-switch-animation) to make workspace switching instant.
+
+Then, to set proper workspace switching shortcuts:
+
+```
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Left']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Right']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Super>Down']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Left']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Right']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Super><Shift>Up']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Super><Shift>Down']"
+```
+
+Note - you'll want to go into keyboard settings and set the "Move window one display to the X" shortcuts to something like `<Super><Shift><Alt>Up/Down/Left/Right`.
 
 ## Install GSConnect
 
