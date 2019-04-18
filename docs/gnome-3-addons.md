@@ -11,6 +11,8 @@ Optionally, to disable the workspace switcher overlay, install [disable-workspac
 
 Optionally, install [disable-workspace-switch-animation](https://extensions.gnome.org/extension/1328/disable-workspace-switch-animation) to make workspace switching instant.
 
+To have some kind of indication of what workspace we're on, install [workspace-indicator](https://extensions.gnome.org/extension/21/workspace-indicator/).
+
 Then, to set proper workspace switching shortcuts:
 
 ```
