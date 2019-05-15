@@ -38,7 +38,7 @@ mac:
 brew install neovim
 ```
 
-- Configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config. Adding some padding inside the terminal is also recommended, if possible.
+- Configure your terminal background color to `#3a3a3a` for best integration with my vim/tmux config. Adding some padding inside the terminal is also recommended, if possible. If you use the default gnome terminal then you don't need to do anything as [the necessary CSS](.config/gtk-3.0/gtk.css) is already included.
 
 - Configure terminal colors to:
 
