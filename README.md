@@ -54,7 +54,7 @@ brew install fish
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 ```
 
-- On macOS, set fish as your default shell:
+- Set fish as your default shell:
 ```
 chsh -s $(which fish)
 ```
