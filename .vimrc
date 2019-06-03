@@ -198,7 +198,7 @@ let g:lightline.component_type = {
 
 " Configure lightline's statusbar
 let g:lightline.active = {
-\  'left': [[ 'mode', 'paste'], ['readonly', 'filename', 'modified']],
+\  'left': [[ 'mode', 'paste'], ['readonly', 'relativepath', 'modified']],
 \  'right': [
 \    ['lineinfo'],
 \    ['percent'],
