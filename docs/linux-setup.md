@@ -5,19 +5,13 @@ Linux Setup
 
 See [gnome-3-addons](./gnome-3-addons.md).
 
-## Install google-drive-ocamlfuse
+## Add graphics switching / power management
 
-https://github.com/astrada/google-drive-ocamlfuse
+We can use System 76's graphics switching and power management tools. These add a handy way to switch which graphics card you're using and what performance settings to use via the Gnome system menu - https://support.system76.com/articles/graphics-switch-ubuntu/
 
-Don't add the entry to fstab - that caused boots to hang.
+## Install Dropbox
 
-Simply add the following to the end of `~/.profile` to start the service 30
-seconds after login:
-
-```
-# After 30 seconds, mount google drive
-(sleep 30 && /usr/bin/google-drive-ocamlfuse "/home/tomw/google-drive") &
-```
+Grab the latest .deb from https://www.dropbox.com/install-linux
 
 ## Install [Ulauncher](https://github.com/Ulauncher/Ulauncher/releases/latest)
 
@@ -28,10 +22,6 @@ sudo add-apt-repository -y ppa:agornostal/ulauncher
 sudo apt update
 sudo apt install ulauncher
 ```
-
-Install Gnome Settings addon - https://github.com/friday/ulauncher-gnome-settings
-
-Add `maps` shortcut with query string of `https://www.google.com/maps?hl=en&q=%s`.
 
 ## Install [Timeshift](https://github.com/teejee2008/timeshift)
 

@@ -7,12 +7,6 @@ Install [workspace-matrix](https://extensions.gnome.org/extension/1485/workspace
 
 To remove workspaces from overview install [hide-workspace-thumbnails](https://extensions.gnome.org/extension/808/hide-workspace-thumbnails/).
 
-Optionally, to disable the workspace switcher overlay, install [disable-workspace-switcher-popup](https://extensions.gnome.org/extension/959/disable-workspace-switcher-popup/).
-
-Optionally, install [disable-workspace-switch-animation](https://extensions.gnome.org/extension/1328/disable-workspace-switch-animation) to make workspace switching instant.
-
-To have some kind of indication of what workspace we're on, install [workspace-indicator](https://extensions.gnome.org/extension/21/workspace-indicator/).
-
 Then, to set proper workspace switching shortcuts:
 
 ```
@@ -28,7 +22,11 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Super>
 
 Note - you'll want to go into keyboard settings and set the "Move window one display to the X" shortcuts to something like `<Super><Shift><Alt>Up/Down/Left/Right`.
 
-## Install GSConnect
+## System resource monitoring
+
+Add system resource monitoring to tray - [Vital](https://extensions.gnome.org/extension/1460/vitals/)
+
+## GSConnect
 
 Add awesome android integration - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/).
 
