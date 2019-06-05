@@ -44,4 +44,4 @@ Ubuntu mainline has a nice dock by default. If using another flavour of gnome 3,
 
 ## Legacy System Tray Icons
 
-Ubuntu has a nice legacy tray by default. Otherwise, install [topicons](https://extensions.gnome.org/extension/1031/topicons/) to add a legacy tray.
+Ubuntu has a nice legacy tray by default. Otherwise, you can manually install the same extension - [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/).
