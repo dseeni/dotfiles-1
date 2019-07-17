@@ -28,7 +28,12 @@ end
 if test -d ~/dev/flutter/bin
   set -gx PATH ~/dev/flutter/bin $PATH
 end
-#
+
+# Set up misc programs
+if test -d ~/programs
+  set -gx PATH ~/programs $PATH
+end
+
 # Set up gcloud
 if test -d ~/dev/google-cloud-sdk
   set -gx PATH ~/dev/google-cloud-sdk/bin $PATH
