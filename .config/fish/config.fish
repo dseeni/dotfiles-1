@@ -38,6 +38,10 @@ end
 if test -d ~/dev/google-cloud-sdk
   set -gx PATH ~/dev/google-cloud-sdk/bin $PATH
 end
+# gcloud mac
+if [ -f '/Users/tomw/Downloads/google-cloud-sdk/path.fish.inc' ];
+  . '/Users/tomw/Downloads/google-cloud-sdk/path.fish.inc';
+end
 
 # Set up Postgres
 if test -d /Library/PostgreSQL/10/bin/
