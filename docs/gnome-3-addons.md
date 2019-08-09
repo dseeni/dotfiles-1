@@ -14,13 +14,22 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Supe
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Right']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Super>Up']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Super>Down']"
+
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Super><Shift>Left']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Super><Shift>Right']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Super><Shift>Up']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Super><Shift>Down']"
-```
 
-Note - you'll want to go into keyboard settings and set the "Move window one display to the X" shortcuts to something like `<Super><Shift><Alt>Up/Down/Left/Right`.
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left "['<Super><Shift><Alt>Left']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "['<Super><Shift><Alt>Right']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-up "['<Super><Shift><Alt>Up']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-down "['<Super><Shift><Alt>Down']"
+
+gsettings set org.gnome.desktop.wm.keybindings maximize "['<Primary><Super>Up']"
+gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Primary><Super>Down']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-w "['<Primary><Super>Left']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-side-e "['<Primary><Super>Right']"
+```
 
 ## System resource monitoring
 
