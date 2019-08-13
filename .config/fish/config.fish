@@ -34,6 +34,11 @@ if test -d ~/programs
   set -gx PATH ~/programs $PATH
 end
 
+# Set up local bin
+if test -d ~/.local/bin
+  set -gx PATH ~/.local/bin $PATH
+end
+
 # Set up gcloud
 if test -d ~/dev/google-cloud-sdk
   set -gx PATH ~/dev/google-cloud-sdk/bin $PATH
