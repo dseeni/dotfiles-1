@@ -51,7 +51,7 @@ sudo pip install --system undervolt
 Recommended:
 
 ```
-sudo undervolt --core -150 --cache -150 --gpu -40 --uncore -40 --temp 85 --temp-bat 75
+sudo undervolt --core -150 --cache -150 --gpu -40 --uncore -40 --temp 85
 ```
 
 Check current:
