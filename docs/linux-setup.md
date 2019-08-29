@@ -33,6 +33,10 @@ sudo apt update
 sudo apt install timeshift
 ```
 
+## Install Whatsapp Desktop
+
+The project is no longer available on GitHub, but you can grab the latest .deb from mint's repositories here - http://packages.linuxmint.com/pool/import/w/whatsapp-desktop/.
+
 ## Install Slack
 
 The .deb includes a repository, so simply download and install the .deb from https://slack.com/intl/es-es/downloads/linux.
