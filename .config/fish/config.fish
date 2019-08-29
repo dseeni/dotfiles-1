@@ -94,4 +94,7 @@ if test -f ~/.awsrc
     . ~/.awsrc
 end
 
+# Set color preferences
+set -U fish_color_command "#33CD74"
+
 . ~/.config/fish/z.fish
