@@ -6,10 +6,18 @@ set -x
 sudo apt update
 
 echo Install necessary programs from apt repositories
-sudo apt install git tmux fish neovim python-pip python3-pip npm ripgrep tldr htop tree clang fd-find
+sudo apt install git tmux fish neovim python-pip python3-pip npm ripgrep tldr htop tree clang fd-find -y
 
 echo Switching shell to fish
 chsh -s $(which fish)
+
+echo Installing rust toolchain
+curl https://sh.rustup.rs -sSf | sh
+
+echo Installing go toolchain
+sudo add-apt-repository ppa:longsleep/golang-backports -y
+sudo apt-get update
+sudo apt-get install golang-go -y
 
 echo Install python dependencies
 sudo pip install flake8 python-language-server s-tui
