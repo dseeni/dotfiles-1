@@ -19,6 +19,10 @@ sudo add-apt-repository ppa:longsleep/golang-backports -y
 sudo apt-get update
 sudo apt-get install golang-go -y
 
+echo Installing get-iplayer
+sudo add-apt-repository ppa:jon-hedgerows/get-iplayer
+sudo apt install get-iplayer
+
 echo Install python dependencies
 sudo pip install flake8 python-language-server s-tui
 
