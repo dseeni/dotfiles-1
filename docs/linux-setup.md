@@ -23,6 +23,10 @@ sudo apt update
 sudo apt install ulauncher
 ```
 
+## Install Google Play Music Desktop Player
+
+Follow the instructions [here](https://github.com/MarshallOfSound/Google-Play-Music-Desktop-Player-UNOFFICIAL-/blob/master/docs/Installation_On_Debian.md).
+
 ## Install [Timeshift](https://github.com/teejee2008/timeshift)
 
 GUI for automated backups to an external HDD.
