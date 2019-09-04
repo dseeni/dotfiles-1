@@ -31,6 +31,16 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-side-w "['<Primary><Super
 gsettings set org.gnome.desktop.wm.keybindings move-to-side-e "['<Primary><Super>Right']"
 ```
 
+## CPUFreq
+
+Tool for managing CPU frequency/profiles - [CPUFreq](https://extensions.gnome.org/extension/1082/cpufreq/)
+
+*Note* - it's important to also remove the irqbalance pacakge - see http://konkor.github.io/cpufreq/faq/#irqbalance-detected.
+
+```
+sudo apt remove irqbalance
+```
+
 ## System resource monitoring
 
 Add system resource monitoring to tray - [Vital](https://extensions.gnome.org/extension/1460/vitals/)
