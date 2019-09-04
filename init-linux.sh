@@ -24,10 +24,7 @@ sudo add-apt-repository ppa:jon-hedgerows/get-iplayer
 sudo apt install get-iplayer
 
 echo Install python dependencies
-sudo pip install flake8 python-language-server s-tui
-
-echo Install python3 dependencies
-sudo pip3 install neovim
+sudo pip3 install neovim flake8 python-language-server s-tui
 
 echo Install node dependencies
 sudo npm install -g n yarn eslint eslint-config-tomjwatson
