@@ -26,6 +26,7 @@ I've tested these dotfiles on both ubuntu and macOS.
   - [tpm](https://github.com/tmux-plugins/tpm) - tmux plugin manager
   - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) - persists tmux environment across system restarts
   - [tmux-yank](https://github.com/tmux-plugins/tmux-yank) - copying to system clipboard
+- [pulse audio config](https://medium.com/@gamunu/enable-high-quality-audio-on-linux-6f16f3fe7e1f) for high quality audio
 
 ## Requirements
 
