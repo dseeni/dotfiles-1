@@ -18,6 +18,7 @@ I've tested these dotfiles on both ubuntu and macOS.
   - [lightline.vim](https://github.com/itchyny/lightline.vim) - powerful and lightweight status/tabline
   - [maximbaz/lightline-ale](https://github.com/maximbaz/lightline-ale) - ALE indicators for lightline
   - [vim-polyglot](https://github.com/sheerun/vim-polyglot) - improved syntax highlighting
+  - [colorizer](https://github.com/lilydjwg/colorizer) - colorize color codes in code
   - [coc.nvim](https://github.com/neoclide/coc.nvim) - LanguageServer client for intelligent autocomplete
 - vim colorschemes:
   - *fansi* - my custom ANSI color scheme

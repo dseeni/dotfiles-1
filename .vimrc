@@ -26,6 +26,9 @@ Plug 'maximbaz/lightline-ale'
 " improved syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
+" colorize color codes
+Plug 'lilydjwg/colorizer'
+
 " LSP client
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
