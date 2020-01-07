@@ -5,11 +5,13 @@ set -x
 
 sudo apt update
 
-echo Install necessary programs from apt repositories
+echo Install debs
 sudo apt install git tmux fish python-pip python3-pip npm ripgrep tldr htop tree clang fd-find -y
 
-echo Installing neovim snap
-snap install --beta nvim --classic
+echo Installing snaps
+sudo snap install --beta nvim --classic
+sudo snap install --classic heroku
+sudo snap install breaktimer telegram-desktop blender code
 
 echo Switching shell to fish
 chsh -s $(which fish)
@@ -27,7 +29,7 @@ sudo add-apt-repository ppa:jon-hedgerows/get-iplayer
 sudo apt install get-iplayer
 
 echo Install python dependencies
-sudo pip3 install neovim flake8 python-language-server s-tui
+sudo pip3 install flake8 python-language-server s-tui
 
 echo Install node dependencies
 sudo npm install -g n yarn eslint eslint-config-tomjwatson
