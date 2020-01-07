@@ -6,7 +6,10 @@ set -x
 sudo apt update
 
 echo Install necessary programs from apt repositories
-sudo apt install git tmux fish neovim python-pip python3-pip npm ripgrep tldr htop tree clang fd-find -y
+sudo apt install git tmux fish python-pip python3-pip npm ripgrep tldr htop tree clang fd-find -y
+
+echo Installing neovim snap
+snap install --beta nvim --classic
 
 echo Switching shell to fish
 chsh -s $(which fish)
