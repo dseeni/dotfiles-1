@@ -84,6 +84,8 @@ sudo npm install -g yarn eslint eslint-config-tomjwatson
 
 ## Installation
 
+- Configure the `.gitconfig` file with your name and username
+
 - Clone the repository and install the configs
 ```
 git clone https://github.com/tom-james-watson/dotfiles

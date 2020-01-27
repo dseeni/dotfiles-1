@@ -10,10 +10,17 @@ function install() {
           --exclude "install.sh" --exclude "README.md" --exclude "UNLICENSE" \
           --exclude ".gitignore" --exclude "update.sh" --exclude "docs/" \
           --exclude "screenshot.png" --exclude "colors.png" \
-          --exclude "init-linux.sh" \
+          --exclude "init-linux.sh" --exclude ".gitconfig.example" \
           -av --no-perms . ~;
     echo "done"
 }
+
+if [ ! -f .gitconfig ]; then
+  echo "Must create a .gitconfig"
+  echo "    > cp .gitconfig.example .gitconfig"
+  echo "    > nano .gitconfig"
+  exit 1
+fi
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     install;
