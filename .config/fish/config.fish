@@ -44,6 +44,11 @@ if test -d /snap/bin
   set -gx PATH /snap/bin $PATH
 end
 
+# Set up go bin
+if test -d ~/go/bin
+  set -gx PATH ~/go/bin $PATH
+end
+
 # Set up gcloud
 if test -d ~/dev/google-cloud-sdk
   set -gx PATH ~/dev/google-cloud-sdk/bin $PATH
