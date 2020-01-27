@@ -10,6 +10,6 @@
     changed = red
     untracked = cyan
 [core]
-    editor = vim
+    editor = nvim
 [push]
     default = upstream
