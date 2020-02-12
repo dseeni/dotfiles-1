@@ -5,8 +5,6 @@ Gnome 3 Setup
 
 Install [workspace-matrix](https://extensions.gnome.org/extension/1485/workspace-matrix/).
 
-To remove workspaces from overview install [hide-workspace-thumbnails](https://extensions.gnome.org/extension/808/hide-workspace-thumbnails/).
-
 Then, to set proper workspace switching shortcuts:
 
 ```
@@ -31,19 +29,13 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-side-w "['<Primary><Super
 gsettings set org.gnome.desktop.wm.keybindings move-to-side-e "['<Primary><Super>Right']"
 ```
 
-## CPUFreq
+## CPU management
 
-Tool for managing CPU frequency/profiles - [CPUFreq](https://extensions.gnome.org/extension/1082/cpufreq/)
-
-*Note* - it's important to also remove the irqbalance pacakge - see http://konkor.github.io/cpufreq/faq/#irqbalance-detected.
-
-```
-sudo apt remove irqbalance
-```
+Tool for managing CPU frequency/profiles - [CPU Power Manager](https://extensions.gnome.org/extension/945/cpu-power-manager/).
 
 ## System resource monitoring
 
-Add system resource monitoring to tray - [Vital](https://extensions.gnome.org/extension/1460/vitals/)
+Add system resource monitoring to tray - [Vital](https://extensions.gnome.org/extension/1460/vitals/).
 
 ## GSConnect
 
@@ -51,7 +43,7 @@ Add awesome android integration - [GSConnect](https://extensions.gnome.org/exten
 
 ## Add Suspend button
 
-Add suspend button to system tray, next to shudown button - [suspend-button](https://extensions.gnome.org/extension/826/suspend-button/)
+Add suspend button to system tray, next to shudown button - [suspend-button](https://extensions.gnome.org/extension/826/suspend-button/).
 
 ## Hide Activities button
 
@@ -64,3 +56,19 @@ Ubuntu mainline has a nice dock by default. If using another flavour of gnome 3,
 ## Legacy System Tray Icons
 
 Ubuntu has a nice legacy tray by default. Otherwise, you can manually install the same extension - [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/).
+
+## NordVPN
+
+This is an indicator that lets you easily manage the `nordvpn` cli program - [NordVPN Connect](https://extensions.gnome.org/extension/1595/nordvpn-connect/).
+
+## Remove Alt+Tab delay
+
+Why is this a thing? [Remove Alt+Tab Delay](https://extensions.gnome.org/extension/1403/remove-alttab-delay/).
+
+## Remove indicator dropdown arrows
+
+Cleans up the system tray somewhat - [Remove Dropdown Arrows](https://extensions.gnome.org/extension/800/remove-dropdown-arrows/).
+
+## Get rid of "App" is ready notifications
+
+Get rid of these pointless notifications - [Window Is Ready - Notification Remover](https://extensions.gnome.org/extension/1007/window-is-ready-notification-remover/).

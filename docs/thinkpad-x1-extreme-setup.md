@@ -7,7 +7,7 @@ Here are the steps that were necessary to get a stable setup with my X1E.
 
 From what I read, I had expected Pop to boot in hybrid mode, but the installer wouldn't boot until I set discrete.
 
-## Install Pop!_OS 18.10 NVIDIA
+## Install Pop!_OS 19.10 NVIDIA
 
 https://system76.com/pop
 
@@ -68,4 +68,16 @@ You should also stop thermalmd, which is an ubuntu service that will clash with 
 sudo systemctl stop thermald.service
 sudo systemctl disable thermald.service
 sudo systemctl mask thermald.service
+```
+
+### Managing intel pstate
+
+Having some way to control intel pstate is pretty much mandatory for a laptop that is pushing thermal boundaries so much. Sometimes you want to force your laptop to save energy and run quietly, at other times you want max performance and don't care about fan noise. Setting intel pstate allows you to control this. For gnome, the easiest way to do that is with the following extension - https://extensions.gnome.org/extension/945/cpu-power-manager/
+
+### Fix graphics stuttering
+
+At somepoint I developed a micro-stutter that consistently happened every ~2 seconds. Running the following fixed it:
+
+```
+sudo kernelstub -a "nvidia-drm.modeset=0"
 ```
